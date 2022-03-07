@@ -4,13 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccea01a1-984d-482e-8213-7bd66a53a52e" name="Changes" comment="" />
+    <list default="true" id="ccea01a1-984d-482e-8213-7bd66a53a52e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/Practica Java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/out/production/Practica Java/Practica/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/out/production/Practica Java/Practica/Persona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/out/production/Practica Java/Practica/PersonaTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/src/Practica/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/src/Practica/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase1Asincronica/src/Practica/PersonaTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/cocinero.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/out/production/cocinero/com/dh/pizzeria/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/out/production/cocinero/com/dh/pizzeria/service/Cocinero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/out/production/cocinero/com/dh/pizzeria/service/impl/CocineroNoVeggie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/out/production/cocinero/com/dh/pizzeria/service/impl/CocineroVeggie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/src/com/dh/pizzeria/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/src/com/dh/pizzeria/service/Cocinero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/src/com/dh/pizzeria/service/impl/CocineroNoVeggie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase2AsinCocinero/src/com/dh/pizzeria/service/impl/CocineroVeggie.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="25paCiwmbb0Mq0rUYELYlCz1XIb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Clase2AsinCocinero" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../C1Asincronica" />
   </component>
   <component name="RunManager" selected="JUnit.PersonaTest.validarEdad">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
