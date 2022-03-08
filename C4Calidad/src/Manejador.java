@@ -1,6 +1,6 @@
 public abstract class Manejador
 {
-    protected Manejador siguienteManejador;
+    private Manejador siguienteManejador;
     // ----------------------------------------
     public Manejador getSiguiente() {
         return this.siguienteManejador;

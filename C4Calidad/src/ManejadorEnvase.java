@@ -5,7 +5,7 @@ public class ManejadorEnvase extends  Manejador{
         if (!arti.getEnvase().equalsIgnoreCase("sano") &&
             !arti.getEnvase().equalsIgnoreCase("casi sano"))
         {
-            System.out.println("Rechazado por envase");
+            System.out.println("La calidad del envase no es el esperado. Rechazado y despedir al que lo compró");
         }
 
         else
