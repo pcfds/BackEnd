@@ -7,7 +7,7 @@ public class TestLog {
     public static void main(String[] args) throws Exception {
         Class.forName("org.h2.Driver").newInstance();
         Connection con = DriverManager.getConnection("jdbc:h2:"+
-                "./Database/my", "root", "myPassword");
+                "~/test", "sa", "");
         Statement stmt = con.createStatement();
 
         //Código para crear una tabla. Elimina la tabla si esta ya existe y la
