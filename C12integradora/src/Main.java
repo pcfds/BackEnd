@@ -1,4 +1,6 @@
 
+import org.apache.log4j.BasicConfigurator;
+
 import java.sql.*;
 import java.util.logging.Logger; // acá iría org.apache.log4j.logger
 
@@ -26,15 +28,13 @@ public class Main {
                     "INSERT INTO TEST VALUES(1, 'Juan', 'Luis', 11423123, 'asd123' );\n" +
                     "INSERT INTO TEST VALUES(2, 'Tomas', 'Romero', 4124124, 'casa123');\n";
             stmt.execute(createSql);
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.info("H");
         }
 
-            //Codigo para consultar todos los registros de la tabla TEST
-            String sql = "select * from EMPLEADOS";
-            ResultSet rd = stmt.executeQuery(sql);
-
-
+        //Codigo para consultar todos los registros de la tabla TEST
+        String sql = "select * from EMPLEADOS";
+        ResultSet rd = stmt.executeQuery(sql);
 
 
         //Código para recorrer el resultado de la consulta
