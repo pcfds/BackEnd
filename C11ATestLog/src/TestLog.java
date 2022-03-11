@@ -6,7 +6,7 @@ import java.sql.Statement;
 public class TestLog {
     public static void main(String[] args) throws Exception {
         Class.forName("org.h2.Driver").newInstance();
-        Connection con = DriverManager.getConnection("jdbc:h2:"+
+        Connection con = DriverManager.getConnection("jdbc:h2:" +
                 "~/test", "sa", "");
         Statement stmt = con.createStatement();
 
@@ -25,7 +25,7 @@ public class TestLog {
         ResultSet rd = stmt.executeQuery(sql);
 
         //Código para recorrer el resultado de la consulta
-        while(rd.next()) {
+        while (rd.next()) {
             System.out.println(rd.getInt(1) + rd.getString(2));
         }
     }
