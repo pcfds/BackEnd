@@ -9,7 +9,6 @@ public class Main {
 
 
         Class.forName("org.h2.Driver").newInstance();
-        //jdbc:h2:~/test
         Connection con = DriverManager.getConnection("jdbc:h2:" +
                 "~/test", "sa", "");
         Statement stmt = con.createStatement();

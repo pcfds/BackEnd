@@ -14,13 +14,17 @@ public class Test {
     public static void main(String[] args) {
         // BasicConfigurator.configure();
 
+        BD baseDeDatos = new BD("conexion");
 
 
-        try {
+
+        /* try {
             // conectando a la base de datos en H2
             Class.forName("org.h2.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
             Statement stmt = conexion.createStatement();
+
+            // SQL
 
             // Vamos a crear la tabla en la base de datos H2
             String createTable = "DROP TABLE IF EXISTS TEST;\n" +
@@ -31,7 +35,7 @@ public class Test {
             //vamos a  insertar datos
 
             String insertarDatos = "INSERT INTO TEST VALUES(1,'Juan',23);\n"+
-                    "INSERT INTO TEST VALUES(1,'Juan',23)";
+                    "INSERT INTO TEST VALUES(2,'Sara',33)";
             stmt.execute(insertarDatos);
             //consulta a base de datos
             String consulta = "SELECT * FROM TEST;";
@@ -41,7 +45,7 @@ public class Test {
 
             while (rs.next()) {
 
-                System.out.println(rs.getString(3));
+                System.out.println("La primer columna contiene: " + rs.getString(3) + " La segunda columna contiene: " + rs.getString(2) + " y  La tercer columna contiene: " +  rs.getString(1));
 
             }
             conexion.close();
@@ -49,6 +53,6 @@ public class Test {
 
         } catch (Exception e) {
            logger.error("Este es un error: ", e);
-        }
+        }*/
     }
 }
