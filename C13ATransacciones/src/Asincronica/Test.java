@@ -55,7 +55,7 @@ public class Test {
             psUpdate.setDouble(1, usuario1.subirSueldo(10d));
             psUpdate.setString(2, usuario1.getEmail());
             psUpdate.execute();
-            int a = 4 / 0;
+            int a = 4 /0 ;
 
             connection.commit();
             connection.setAutoCommit(true);

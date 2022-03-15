@@ -1,7 +1,10 @@
 package practica;
 
+import java.time.LocalDate;
+
 public class Pacientes {
 
+    private int id;
     private String nombre;
     private String apellido;
     private String domicilio;
@@ -10,7 +13,8 @@ public class Pacientes {
     private String usuario;
     private String contrasenia;
 
-    public Pacientes(String nombre, String apellido, String domicilio, int dni, int fechDeAlta, String usuario, String contrasenia) {
+    public Pacientes(int id, String nombre, String apellido, String domicilio, int dni, int fechDeAlta, String usuario, String contrasenia) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.domicilio = domicilio;
@@ -18,6 +22,14 @@ public class Pacientes {
         this.fechDeAlta = fechDeAlta;
         this.usuario = usuario;
         this.contrasenia = contrasenia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -77,7 +89,7 @@ public class Pacientes {
     }
 
     public String cambiarContrasenia(String contrasenia){
-         return this.contrasenia = contrasenia;
+        return  this.contrasenia = contrasenia;
     }
 
     @Override

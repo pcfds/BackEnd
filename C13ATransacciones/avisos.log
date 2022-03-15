@@ -15,3 +15,12 @@ CREATE TABLE USUARIO(ID INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido V
 [2022-03-13 18:19:05] [ ERROR] [Test:&L] Este es el siguiente error: Error de Sintaxis en sentencia SQL "CREATE TABLE USUARIO(ID INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,[*])"; se esperaba "identifier"
 Syntax error in SQL statement "CREATE TABLE USUARIO(ID INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,[*])"; expected "identifier"; SQL statement:
 CREATE TABLE USUARIO(ID INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,) [42001-210]
+[2022-03-14 14:02:49] [ ERROR] [Test:&L] Este es el siguiente error: Error de Sintaxis en sentencia SQL "CREATE TABLE USUARIO(id INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,[*])"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE USUARIO(id INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,[*])"; expected "identifier"; SQL statement:
+CREATE TABLE USUARIO(id INT PRIMARY KEY,nombre VARCHAR (100) NOT NULL,apellido VARCHAR (100) NOT NULL,domicilio VARCHAR (100) NOT NULL,dni INT NOT NULL,fechaAlta INT NOT NULL,usuario VARCHAR (100) NOT NULL,contrasenia VARCHAR (100) NOT NULL,) [42001-210]
+[2022-03-14 14:04:41] [ ERROR] [Test:&L] Este es el siguiente error: / by zero
+[2022-03-14 14:10:01] [ ERROR] [Test:&L] Este es el siguiente error: / by zero
+[2022-03-14 14:10:51] [ ERROR] [Test:&L] Este es el siguiente error: / by zero
+[2022-03-14 14:11:03] [ ERROR] [Test:&L] Este es el siguiente error: / by zero
+[2022-03-14 14:21:05] [ ERROR] [Test:&L] Este es el siguiente error: / by zero
+[2022-03-14 14:22:30] [ ERROR] [Test:&L] Este es el siguiente error: / by zero

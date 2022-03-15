@@ -1,7 +1,5 @@
 package practica;
-
 import org.apache.log4j.Logger;
-
 import java.sql.*;
 
 
@@ -12,23 +10,23 @@ public class Test {
     // creando las tablas
 
 
-    private static final String sql_create_table = "DROP TABLE IF EXISTS USUARIO;" + "CREATE TABLE USUARIO"
+    private static final String sql_create_table = "DROP TABLE IF EXISTS USUARIO; CREATE TABLE USUARIO"
             + "("
-            + "ID INT PRIMARY KEY,"
+            + "id INT PRIMARY KEY,"
             + "nombre VARCHAR (100) NOT NULL,"
             + "apellido VARCHAR (100) NOT NULL,"
             + "domicilio VARCHAR (100) NOT NULL,"
             + "dni INT NOT NULL,"
             + "fechaAlta INT NOT NULL,"
             + "usuario VARCHAR (100) NOT NULL,"
-            + "contrasenia VARCHAR (100) NOT NULL,"
+            + "contrasenia VARCHAR (100) NOT NULL"
             + ")";
 
     // creando insert
     private static final String sql_insert = "INSERT INTO USUARIO VALUES (?,?,?,?,?,?,?,?);";
 
     // actualizando datos
-    private static final String sql_update = "UPDATE USUARIO SET contrasenia=? WHERE dni=?;";
+    private static final String sql_update = "UPDATE USUARIO SET contrasenia=? WHERE id=?;";
 
     // creando conexion
 
@@ -43,7 +41,7 @@ public class Test {
     public static void main(String[] args) throws Exception {
 
 
-        Pacientes paciente1 = new Pacientes("Pedro", "Castro Feijoo", "DH 123", 123455, 25 - 5, "pedrocf", "1234");
+        Pacientes paciente1 = new Pacientes(1, "Pedro", "Castro Feijoo", "DH 123", 123455, 22, "pedrocf", "1234");
 
         Connection connection = getConnection();
         try {
@@ -75,11 +73,14 @@ public class Test {
             // actualizamos datos
 
             PreparedStatement psUpdate = connection.prepareStatement(sql_update);
-            psUpdate.setString(1, paciente1.cambiarContrasenia("casa"));
-            psUpdate.setInt(2, paciente1.getDni());
+            psUpdate.setString(1, paciente1.cambiarContrasenia("memento"));
+            psUpdate.setInt(2, paciente1.getId());
+            int a = 4/0;
             psUpdate.execute();
 
             connection.commit();
+
+            // utilizar patron memento para rollback en java (buscar después).
 
             connection.setAutoCommit(true);
 
@@ -101,6 +102,14 @@ public class Test {
 
 
         } finally {
+
+            String sql = "SELECT * FROM USUARIO;";
+            Statement statement = connection.createStatement();
+            ResultSet rd = statement.executeQuery(sql);
+
+            while (rd.next()) {
+                System.out.println("EL id es: " + rd.getInt(1) + " " + rd.getString(2) + rd.getString(3) + rd.getString(4) + rd.getInt(5) + rd.getInt(6) + rd.getString(7) + rd.getString(8));
+            }
 
             connection.close();
 
