@@ -1,13 +1,13 @@
 package model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Paciente {
     private Long id;
     private String nombre;
     private String apellido;
     private int dni;
-    private Date fechaDeIngreso;
+    Date fechaDeIngreso;
     private Domicilio domicilio;
 
     public Paciente(Long id, String nombre, String apellido, int dni, Date fechaDeIngreso, Domicilio domicilio) {
