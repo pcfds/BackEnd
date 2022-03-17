@@ -111,7 +111,7 @@ public class PacienteDaoH2 implements IDao<Paciente>  {
                 String nombre = result.getString("nombre");
                 String apellido = result.getString("apellido");
                 String dni = result.getString("dni");
-                Date fechaIngreso = result.getDate("fecha_ingreso");
+                    Date fechaIngreso = result.getDate("fecha_ingreso");
                 int idDomicilio = result.getInt("domicilio_id");
                 //Con el domicilio_id traemos el domicilio de la tabla domicilio a traves de DAO de Domicilios
                 Domicilio domicilio = domicilioDaoH2.buscar(idDomicilio);

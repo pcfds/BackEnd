@@ -1,17 +1,29 @@
-package model;
+package ejercicePacientes.entities;
 
 public class Domicilio {
+
     private Long id;
     private String calle;
-    private int numero;
+    private String numero;
     private String localidad;
-    private String Provincia;
+    private String provincia;
 
-    public Domicilio(String calle, int numero, String localidad, String provincia) {
+    public Domicilio( String calle, String numero, String localidad, String provincia) {
         this.calle = calle;
         this.numero = numero;
         this.localidad = localidad;
-        Provincia = provincia;
+        this.provincia = provincia;
+    }
+
+    @Override
+    public String toString() {
+        return "Domicilio{" +
+                "id=" + id +
+                ", calle='" + calle + '\'' +
+                ", numero='" + numero + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                '}';
     }
 
     public Long getId() {
@@ -30,11 +42,11 @@ public class Domicilio {
         this.calle = calle;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -47,10 +59,10 @@ public class Domicilio {
     }
 
     public String getProvincia() {
-        return Provincia;
+        return provincia;
     }
 
     public void setProvincia(String provincia) {
-        Provincia = provincia;
+        this.provincia = provincia;
     }
 }

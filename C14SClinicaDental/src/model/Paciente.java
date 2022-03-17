@@ -7,7 +7,7 @@ public class Paciente {
     private String nombre;
     private String apellido;
     private int dni;
-    Date fechaDeIngreso;
+    private Date fechaDeIngreso;
     private Domicilio domicilio;
 
     public Paciente(Long id, String nombre, String apellido, int dni, Date fechaDeIngreso, Domicilio domicilio) {

@@ -1,0 +1,261 @@
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:44:22] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:44:22] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:47:10] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:47:10] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"
+IO Exception: "java.nio.file.NoSuchFileException: creates.sql"; "creates.sql"; SQL statement:
+RUNSCRIPT FROM 'creates.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:49:18] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:49:18] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:06] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:55:06] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:55:29] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:55:29] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:25] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:58:25] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 14:58:48] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 14:58:48] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:05] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:00:05] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:00:39] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:00:39] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO odontologo(numero_matricula,nombre, apellido) VALUES(?,?,?) [42104-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO odontologo(numero_matricula,nombre, apellido) VALUES(?,?,?) [42104-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO odontologo(numero_matricula,nombre, apellido) VALUES(?,?,?) [42104-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+ SELECT * FROM odontologo [42104-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+DELETE FROM odontologo where id = ? [42104-210]
+[2022-03-17 15:02:56] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+SELECT * FROM odontologo WHERE ID=? [42104-210]
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO odontologo(numero_matricula,nombre, apellido) VALUES(?,?,?) [42104-210]
+[2022-03-17 15:02:56] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:02:56] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+SELECT * FROM odontologo WHERE ID=? [42104-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguietne error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:10] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:03:10] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Search All Patients: SUCCESS
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ha eliminado con exito
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente

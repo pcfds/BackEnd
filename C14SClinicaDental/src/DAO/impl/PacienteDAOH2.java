@@ -69,8 +69,8 @@ public class PacienteDAOH2 implements iDao<Paciente> {
             //3 Ejecutar una sentencia SQL
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (Exception e) {
-            logger.error("Este fue el error; " + e.getMessage());
+            } catch (Exception e) {
+                logger.error("Este fue el error; " + e.getStackTrace());
         }
 
 
