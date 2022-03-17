@@ -13,7 +13,7 @@ public class OdontologoDAOH2 implements iDao<Odontologo> {
     private static final Logger logger = Logger.getLogger(OdontologoDAOH2.class);
 
     private final static String DB_JDBC_DRIVER = "org.h2.Driver";
-    private final static String DB_URL = "jdbc:h2:~/test"; //INIT=RUNSCRIPT FROM 'create.sql'";
+    private final static String DB_URL = "jdbc:h2:~/test;INIT=RUNSCRIPT FROM 'create.sql'";
     // Después de varios intentos, sacando el INIT y creando manual en H2 lo conseguí. Saludos Peter.
     private final static String DB_USER = "sa";
     private final static String DB_PASSWORD = "";
@@ -99,7 +99,7 @@ public class OdontologoDAOH2 implements iDao<Odontologo> {
             preparedStatement.close();
             logger.info("Se ha eliminado con exito");
         } catch (Exception e) {
-            logger.error("Se ha encontrado el siguietne error: " + e.getMessage());
+            logger.error("Se ha encontrado el siguiente error: " + e.getMessage());
         }
 
 

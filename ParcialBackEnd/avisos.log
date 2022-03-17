@@ -259,3 +259,87 @@ Database may be already in use: null. Possible solutions: close all other connec
 [2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
 [2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
 [2022-03-17 15:03:41] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:12:41] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:12:41] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: La base de datos puede que ya esté siendo utilizada: null. Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-210]
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Search All Patients: SUCCESS
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se ha eliminado con exito
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:13:03] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Search All Patients: SUCCESS
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se ha eliminado con exito
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:15:14] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 15:33:28] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 15:33:28] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Search All Patients: ERROR, Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Se ha encontrado el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] Se encontró el siguiente error: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:10:50] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 16:10:50] [ ERROR] [OdontologoDAOH2:&L] El siguiente error se encontró: Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-210]
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Search All Patients: SUCCESS
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se ha eliminado con exito
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se ejecuto correctamente
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Buscar Odontologo inicializado
+[2022-03-17 16:11:42] [ INFO ] [OdontologoDAOH2:&L] Se trajo al paciente
