@@ -34,7 +34,7 @@ public class Main {
         FileInputStream fi = null;
 
         try {
-            fi = new FileInputStream("OutputFileContacto.txt");
+            fi = new FileInputStream("OutputFile.txt");
             ObjectInputStream ois = new ObjectInputStream(fi);
             contactosRecuperados = (ArrayList) ois.readObject();
         } catch (Exception e) {
