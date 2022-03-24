@@ -2,16 +2,10 @@ package Parcial.Services;
 
 import Parcial.DAO.impl.OdontologoDAOH2;
 import Parcial.Models.Odontologo;
-import Parcial.Services.OdontologoService;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-
-import java.util.Date;
-import java.util.List;
-
-import java.util.Date;
 import java.util.List;
 
 public class OdontologoServiceTest {
