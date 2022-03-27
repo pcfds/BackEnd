@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class    ImplPacienteDaoH2 implements IDao<Paciente>{
+public class   ImplPacienteDaoH2 implements IDao<Paciente>{
 
     private final static String DB_JDBC_DRIVER = "org.h2.Driver"; //guardamos driver de h2
     private final static String DB_URL = "jdbc:h2:~/db_clinica;"; //BASE DE DATOS URL

@@ -1,13 +1,11 @@
 package com.Integrative.IntegrativeWork.DAO.impl;
 
 import com.Integrative.IntegrativeWork.DAO.iDao;
-import com.Integrative.IntegrativeWork.Domain.Patient;
-
+import com.Integrative.IntegrativeWork.Domain.Appointment;
 
 import java.util.List;
 
-public class PatientDAOH2 implements iDao<Patient> {
-
+public class AppointmentDAOH2 implements iDao<Appointment> {
 
 
     private static final String DB_JDBC_DRIVER = "org.h2.Driver";
@@ -16,19 +14,18 @@ public class PatientDAOH2 implements iDao<Patient> {
     private static final String DB_PASS = "";
 
 
-
     @Override
-    public Patient register(Patient patient) {
+    public Appointment register(Appointment appointment) {
         return null;
     }
 
     @Override
-    public Patient search(int id) {
+    public Appointment search(int id) {
         return null;
     }
 
     @Override
-    public Patient update(int id, Patient patient) {
+    public Appointment update(int id, Appointment appointment) {
         return null;
     }
 
@@ -38,7 +35,7 @@ public class PatientDAOH2 implements iDao<Patient> {
     }
 
     @Override
-    public List<Patient> searchAll() {
+    public List<Appointment> searchAll() {
         return null;
     }
 }

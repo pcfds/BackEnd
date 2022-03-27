@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Patient {
 
-    private int patient_id;
+    private int id_patient;
     private String name;
     private String surname;
-    private String address;
+    private Address address;
     private int dni;
     private Date dateInit;
 
-    public Patient(int patient_id, String name, String surname, String address, int dni, Date dateInit) {
-        this.patient_id = patient_id;
+    public Patient(int id_patient, String name, String surname, Address address, int dni, Date dateInit) {
+        this.id_patient = id_patient;
         this.name = name;
         this.surname = surname;
         this.address = address;
@@ -20,12 +20,12 @@ public class Patient {
         this.dateInit = dateInit;
     }
 
-    public int getPatient_id() {
-        return patient_id;
+    public int getId_patient() {
+        return id_patient;
     }
 
-    public void setPatient_id(int patient_id) {
-        this.patient_id = patient_id;
+    public void setId_patient(int id_patient) {
+        this.id_patient = id_patient;
     }
 
     public String getName() {
@@ -44,11 +44,11 @@ public class Patient {
         this.surname = surname;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -71,7 +71,7 @@ public class Patient {
     @Override
     public String toString() {
         return "Patient{" +
-                "patient_id=" + patient_id +
+                "patient_id=" + id_patient +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", address='" + address + '\'' +
