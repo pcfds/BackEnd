@@ -1,6 +1,6 @@
 package com.Integrative.IntegrativeWork.Services;
 
-import com.Integrative.IntegrativeWork.DAO.iDao;
+import com.Integrative.IntegrativeWork.Repository.iDao;
 import com.Integrative.IntegrativeWork.Domain.Patient;
 
 import java.util.List;

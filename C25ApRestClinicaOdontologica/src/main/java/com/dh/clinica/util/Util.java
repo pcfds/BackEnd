@@ -1,7 +1,7 @@
-package com.Integrative.IntegrativeWork.Util;
+package com.dh.clinica.util;
 
-import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Date;
 
 public class Util {
 

@@ -1,4 +1,4 @@
-package com.Integrative.IntegrativeWork.DAO;
+package com.Integrative.IntegrativeWork.Repository;
 
 import java.util.List;
 
