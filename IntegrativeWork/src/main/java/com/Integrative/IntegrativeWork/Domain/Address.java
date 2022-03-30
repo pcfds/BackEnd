@@ -2,24 +2,24 @@ package com.Integrative.IntegrativeWork.Domain;
 
 public class Address {
 
-    private int id_address;
+    private Integer id;
     private String street;
-    private int number;
+    private Integer number;
     private String city;
 
-    public Address(int id_address, String street, int number, String city) {
-        this.id_address = id_address;
+    public Address(Integer id, String street, Integer number, String city) {
+        this.id = id;
         this.street = street;
         this.number = number;
         this.city = city;
     }
 
-    public int getId_address() {
-        return id_address;
+    public Integer getId() {
+        return id;
     }
 
-    public void setId_address(int id_address) {
-        this.id_address = id_address;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getStreet() {
@@ -30,11 +30,11 @@ public class Address {
         this.street = street;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
@@ -49,7 +49,7 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "id_address=" + id_address +
+                "id_address=" + id +
                 ", street='" + street + '\'' +
                 ", number=" + number +
                 ", city='" + city + '\'' +

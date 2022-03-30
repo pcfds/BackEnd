@@ -25,15 +25,15 @@ public class DentistService {
         return dentistIdao.register(dentist);
     }
 
-    public Dentist search(int id) {
+    public Dentist search(Integer id) {
         return dentistIdao.search(id);
     }
 
-    public Dentist update(int id, Dentist dentist) {
+    public Dentist update(Integer id, Dentist dentist) {
         return dentistIdao.update(id, dentist);
     }
 
-    public void delete(int id) {
+    public void delete(Integer id) {
         dentistIdao.delete(id);
     }
 

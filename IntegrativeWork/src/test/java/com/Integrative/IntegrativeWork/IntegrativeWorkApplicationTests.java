@@ -15,7 +15,7 @@ class IntegrativeWorkApplicationTests {
 
 
 
-	public static boolean beforeAll() {
+	public static boolean datosTesteo() {
 		Dentist dentist = new Dentist("Pablo", "Perez", 32424);
 		boolean conn = false;
 		String DB_JDBC_DRIVER = "org.h2.Driver";
@@ -38,7 +38,7 @@ class IntegrativeWorkApplicationTests {
 		public void createDentists() {
 			DentistService dentistService = new DentistService(new DentistDAOH2());
 			Dentist dentist = new Dentist("Pablo", "Perez", 32424);
-			Assertions.assertTrue(dentistService.register(dentist).getId_dentist() >= 0 && beforeAll());
+			Assertions.assertTrue(dentistService.register(dentist).getId() >= 0 && datosTesteo());
 		}
 
 		@Test
@@ -59,7 +59,7 @@ class IntegrativeWorkApplicationTests {
 		public void deleteDentist() {
 			DentistService dentistService = new DentistService(new DentistDAOH2());
 			dentistService.delete(1);
-			Assertions.assertTrue(dentistService.search(1) == null && beforeAll());
+			Assertions.assertTrue(dentistService.search(1) == null && datosTesteo());
 		}
 
 

@@ -35,14 +35,14 @@ public class PatientDAOH2 implements iDao<Patient> {
             Address address = patient.getAddress();
             preparedStatement.setString(1, patient.getName());
             preparedStatement.setString(2, patient.getSurname());
-            preparedStatement.setInt(3, addressDaoH2.register(address).getId_address());
+            preparedStatement.setInt(3, addressDaoH2.register(address).getId());
             preparedStatement.setInt(4, patient.getDni());
             preparedStatement.setDate(5, new java.sql.Date(patient.getDateInit().getTime()));
             preparedStatement.executeUpdate();
             ResultSet keys = preparedStatement.getGeneratedKeys();
 
             if (keys.next()) {
-                patient.setId_patient(keys.getInt(1));
+                patient.setId(keys.getInt(1));
             }
             preparedStatement.close();
             connection.close();
@@ -59,7 +59,7 @@ public class PatientDAOH2 implements iDao<Patient> {
     }
 
     @Override
-    public Patient search(int id) {
+    public Patient search(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Patient patient = null;
@@ -85,7 +85,7 @@ public class PatientDAOH2 implements iDao<Patient> {
     }
 
     @Override
-    public Patient update(int id, Patient patient) {
+    public Patient update(Integer id, Patient patient) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Patient patient1 = null;
@@ -97,7 +97,7 @@ public class PatientDAOH2 implements iDao<Patient> {
             preparedStatement = connection.prepareStatement(SQL_UPDATE);
             preparedStatement.setString(1, patient.getName());
             preparedStatement.setString(2, patient.getSurname());
-            preparedStatement.setInt(3, addressDaoH2.update(patient.getAddress().getId_address(), patient.getAddress()).getId_address());
+            preparedStatement.setInt(3, addressDaoH2.update(patient.getAddress().getId(), patient.getAddress()).getId());
             preparedStatement.setInt(4, patient.getDni());
             preparedStatement.setDate(5, new java.sql.Date(patient.getDateInit().getTime()));
             preparedStatement.setInt(6, id);
@@ -113,7 +113,7 @@ public class PatientDAOH2 implements iDao<Patient> {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_DELETE = "DELETE FROM PATIENTS WHERE ID = ?";
@@ -122,7 +122,7 @@ public class PatientDAOH2 implements iDao<Patient> {
             Class.forName(DB_JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URl, DB_USER, DB_PASS);
             preparedStatement = connection.prepareStatement(SQL_DELETE);
-            addressDaoH2.delete(search(id).getAddress().getId_address());
+            addressDaoH2.delete(search(id).getAddress().getId());
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
             preparedStatement.close();

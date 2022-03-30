@@ -25,20 +25,21 @@ public class PatientService {
         return patientiDao.register(patient);
     }
 
-    public Patient search(int id) {
+    public Patient search(Integer id) {
         return patientiDao.search(id);
     }
 
-    public Patient update(int id, Patient patient) {
+    public Patient update(Integer id, Patient patient) {
         return patientiDao.update(id,patient);
     }
 
-    public void delete(int id) {
+    public void delete(Integer id) {
         patientiDao.delete(id);
     }
 
     public List<Patient> searchAll() {
         return patientiDao.searchAll();
     }
+
 
 }

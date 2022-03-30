@@ -38,13 +38,13 @@ public class AppointmentDAOH2 implements iDao<Appointment> {
             Class.forName(DB_JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URl, DB_USER, DB_PASS);
             preparedStatement = connection.prepareStatement(SQL_INSERT, PreparedStatement.RETURN_GENERATED_KEYS);
-            preparedStatement.setInt(1, appointment.getDentist().getId_dentist());
-            preparedStatement.setInt(2, appointment.getPatient().getId_patient());
+            preparedStatement.setInt(1, appointment.getDentist().getId());
+            preparedStatement.setInt(2, appointment.getPatient().getId());
             preparedStatement.setDate(3, new Date(appointment.getDate().getTime()));
             preparedStatement.executeUpdate();
             ResultSet keys = preparedStatement.getGeneratedKeys();
             if (keys.next()) {
-                appointment.setId_appointment(keys.getInt(1));
+                appointment.setId(keys.getInt(1));
             }
             logger.info("Appointment registered successfully");
 
@@ -55,7 +55,7 @@ public class AppointmentDAOH2 implements iDao<Appointment> {
     }
 
     @Override
-    public Appointment search(int id) {
+    public Appointment search(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_SELECT = "SELECT * FROM APPOINTMENTS WHERE ID = ?";
@@ -85,7 +85,7 @@ public class AppointmentDAOH2 implements iDao<Appointment> {
     }
 
     @Override
-    public Appointment update(int id, Appointment appointment) {
+    public Appointment update(Integer id, Appointment appointment) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_UPDATE = "UPDATE APPOINTMENTS SET PATIENT_ID = ?, DENTIST_ID = ?, DATE = ? WHERE ID = ?";
@@ -95,14 +95,14 @@ public class AppointmentDAOH2 implements iDao<Appointment> {
             Class.forName(DB_JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URl, DB_USER, DB_PASS);
             preparedStatement = connection.prepareStatement(SQL_UPDATE);
-            preparedStatement.setInt(2, appointment.getDentist().getId_dentist());
-            preparedStatement.setInt(3, appointment.getPatient().getId_patient());
+            preparedStatement.setInt(2, appointment.getDentist().getId());
+            preparedStatement.setInt(3, appointment.getPatient().getId());
             preparedStatement.setDate(4, new Date(appointment.getDate().getTime()));
             preparedStatement.setInt(5, id);
             preparedStatement.executeUpdate();
 
             appointment1 = appointment;
-            appointment1.setId_appointment(id);
+            appointment1.setId(id);
             logger.info("Appointment updated successfully");
 
         } catch (Exception e) {
@@ -112,7 +112,7 @@ public class AppointmentDAOH2 implements iDao<Appointment> {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_DELETE = "DELETE FROM APPOINTMENTS WHERE ID = ?";

@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class Appointment {
 
-    private int id_appointment;
+    private Integer id;
     private Patient patient;
     private Dentist dentist;
     private Date date;
 
-    public Appointment(int id_appointment, Dentist dentist, Patient patient, Date date) {
-        this.id_appointment = id_appointment;
+    public Appointment(int id, Dentist dentist, Patient patient, Date date) {
+        this.id = id;
         this.dentist = dentist;
         this.patient = patient;
         this.date = date;
     }
 
-    public int getId_appointment() {
-        return id_appointment;
+    public Integer getId() {
+        return id;
     }
 
-    public void setId_appointment(int id_appointment) {
-        this.id_appointment = id_appointment;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Dentist getDentist() {
@@ -51,7 +51,7 @@ public class Appointment {
     @Override
     public String toString() {
         return "Appointment{" +
-                "id_appointment=" + id_appointment +
+                "id_appointment=" + id +
                 ", Dentist=" + dentist +
                 ", patient=" + patient +
                 ", date=" + date +

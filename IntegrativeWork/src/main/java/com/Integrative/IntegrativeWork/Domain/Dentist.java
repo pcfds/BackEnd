@@ -1,30 +1,30 @@
 package com.Integrative.IntegrativeWork.Domain;
 
 public class Dentist {
-    private int id_dentist;
+    private Integer id;
     private String name;
     private String surname;
-    private int register;
+    private Integer register;
 
-    public Dentist(int id_dentist, String name, String surname, int register) {
-        this.id_dentist = id_dentist;
+    public Dentist(Integer id, String name, String surname, Integer register) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.register = register;
     }
 
-    public Dentist(String name, String surname, int register) {
+    public Dentist(String name, String surname, Integer register) {
         this.name = name;
         this.surname = surname;
         this.register = register;
     }
 
-    public int getId_dentist() {
-        return id_dentist;
+    public Integer getId() {
+        return id;
     }
 
-    public void setId_dentist(int id_dentist) {
-        this.id_dentist = id_dentist;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -43,18 +43,18 @@ public class Dentist {
         this.surname = surname;
     }
 
-    public int getRegister() {
+    public Integer getRegister() {
         return register;
     }
 
-    public void setRegister(int register) {
+    public void setRegister(Integer register) {
         this.register = register;
     }
 
     @Override
     public String toString() {
         return "Dentist{" +
-                "id=" + id_dentist +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", register=" + register +

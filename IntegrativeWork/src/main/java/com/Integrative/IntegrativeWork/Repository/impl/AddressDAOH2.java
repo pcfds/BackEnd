@@ -42,7 +42,7 @@ public class AddressDAOH2 implements iDao<Address> {
             ResultSet keys = preparedStatement.getGeneratedKeys();
 
             if (keys.next()) {
-                address.setId_address(keys.getInt(1));
+                address.setId(keys.getInt(1));
             }
             preparedStatement.close();
             address1 = address;
@@ -55,7 +55,7 @@ public class AddressDAOH2 implements iDao<Address> {
     }
 
     @Override
-    public Address search(int id) {
+    public Address search(Integer id) {
         logger.info("Searching address with id: " + id);
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -79,7 +79,7 @@ public class AddressDAOH2 implements iDao<Address> {
     }
 
     @Override
-    public Address update(int id, Address address) {
+    public Address update(Integer id, Address address) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_UPDATE = "UPDATE ADDRESS SET street = ?, number = ?, city = ? WHERE ID = ?";
@@ -104,7 +104,7 @@ public class AddressDAOH2 implements iDao<Address> {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         String SQL_DELETE = "DELETE FROM ADDRESS WHERE ID = ?";

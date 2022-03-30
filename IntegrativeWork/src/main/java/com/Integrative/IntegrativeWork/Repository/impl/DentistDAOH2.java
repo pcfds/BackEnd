@@ -54,7 +54,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
             logger.info("Update done");
             ResultSet keys = preparedStatement.getGeneratedKeys();
             if (keys.next()){
-                dentist.setId_dentist(keys.getInt(1));
+                dentist.setId(keys.getInt(1));
             }
             preparedStatement.close();
             conn.close();
@@ -68,7 +68,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
     }
 
     @Override
-    public Dentist search(int id) {
+    public Dentist search(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Dentist dentist = null;
@@ -104,7 +104,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
     }
 
     @Override
-    public Dentist update(int id, Dentist dentist) {
+    public Dentist update(Integer id, Dentist dentist) {
 
 
         Connection connection = null;
@@ -121,7 +121,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
             preparedStatement.setString(1, dentist.getName());
             preparedStatement.setString(2, dentist.getSurname());
             preparedStatement.setInt(3, dentist.getRegister());
-            preparedStatement.setInt(4, dentist.getId_dentist());
+            preparedStatement.setInt(4, dentist.getId());
 
             //3 Ejecutar una sentencia SQL y obtener los ID que se autogeneraron en la base de datos
             preparedStatement.executeUpdate();
@@ -135,7 +135,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
 
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
