@@ -28,7 +28,7 @@ public class AddressDAOH2 implements iDao<Address> {
     public Address register(Address address) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        String SQL_INSERT = "INSERT INTO ADDRESS (STREET, number ,CITY) VALUES (?,?,?)";
+        String SQL_INSERT = "INSERT INTO ADDRESS (STREET, NUMBER ,CITY) VALUES (?,?,?)";
         Address address1 = null;
         try {
             logger.info("Registering address");
@@ -79,6 +79,11 @@ public class AddressDAOH2 implements iDao<Address> {
     }
 
     @Override
+    public Address searchEmail(String email) {
+        return null;
+    }
+
+    @Override
     public Address update(Integer id, Address address) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -90,7 +95,6 @@ public class AddressDAOH2 implements iDao<Address> {
             preparedStatement.setString(1, address.getStreet());
             preparedStatement.setInt(2, address.getNumber());
             preparedStatement.setString(3, address.getCity());
-            preparedStatement.setInt(5, id);
             preparedStatement.executeUpdate();
             preparedStatement.close();
             connection.close();

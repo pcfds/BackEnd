@@ -30,7 +30,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
         AddressDAOH2 addressDAOH2 = new AddressDAOH2();
 
         String SQL_INSERT = "INSERT INTO dentists(name,surname,register) values(?,?,?)";
-        logger.info("Dentist register init");
+//        logger.info("Dentist register init");
         try {
             //1 Levantar el driver y Conectarnos
             Class.forName(DB_JDBC_DRIVER);
@@ -61,8 +61,11 @@ public class DentistDAOH2 implements iDao<Dentist> {
 
 
 
-        } catch (Exception e) {
-            logger.error("Found an error: " + e.getMessage());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } return dentist;
 
     }
@@ -101,6 +104,11 @@ public class DentistDAOH2 implements iDao<Dentist> {
         }
 
         return dentist;
+    }
+
+    @Override
+    public Dentist searchEmail(String email) {
+        return null;
     }
 
     @Override
@@ -169,7 +177,7 @@ public class DentistDAOH2 implements iDao<Dentist> {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
 
             //2 Crear una sentencia
-            preparedStatement = connection.prepareStatement("SELECT *  FROM domicilios");
+            preparedStatement = connection.prepareStatement("SELECT *  FROM dentists");
 
             //3 Ejecutar una sentencia SQL
             ResultSet result = preparedStatement.executeQuery();

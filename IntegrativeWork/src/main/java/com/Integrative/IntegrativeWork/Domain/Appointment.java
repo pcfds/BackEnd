@@ -1,5 +1,6 @@
 package com.Integrative.IntegrativeWork.Domain;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Appointment {
@@ -7,12 +8,16 @@ public class Appointment {
     private Integer id;
     private Patient patient;
     private Dentist dentist;
-    private Date date;
+    private LocalDate date;
 
-    public Appointment(int id, Dentist dentist, Patient patient, Date date) {
+    public Appointment(){
+
+    }
+
+    public Appointment(Integer id, Patient patient, Dentist dentist, LocalDate date) {
         this.id = id;
-        this.dentist = dentist;
         this.patient = patient;
+        this.dentist = dentist;
         this.date = date;
     }
 
@@ -24,14 +29,6 @@ public class Appointment {
         this.id = id;
     }
 
-    public Dentist getDentist() {
-        return dentist;
-    }
-
-    public void setDentist(Dentist dentist) {
-        this.dentist = dentist;
-    }
-
     public Patient getPatient() {
         return patient;
     }
@@ -40,21 +37,19 @@ public class Appointment {
         this.patient = patient;
     }
 
-    public Date getDate() {
+    public Dentist getDentist() {
+        return dentist;
+    }
+
+    public void setDentist(Dentist dentist) {
+        this.dentist = dentist;
+    }
+
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Appointment{" +
-                "id_appointment=" + id +
-                ", Dentist=" + dentist +
-                ", patient=" + patient +
-                ", date=" + date +
-                '}';
     }
 }

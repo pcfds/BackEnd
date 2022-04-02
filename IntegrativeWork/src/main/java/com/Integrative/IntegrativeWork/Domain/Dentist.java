@@ -1,19 +1,27 @@
 package com.Integrative.IntegrativeWork.Domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Dentist {
     private Integer id;
     private String name;
     private String surname;
     private Integer register;
 
+    public Dentist(){
+
+    }
+
     public Dentist(Integer id, String name, String surname, Integer register) {
+
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.register = register;
     }
 
-    public Dentist(String name, String surname, Integer register) {
+    public Dentist (String name, String surname, Integer register) {
+
         this.name = name;
         this.surname = surname;
         this.register = register;

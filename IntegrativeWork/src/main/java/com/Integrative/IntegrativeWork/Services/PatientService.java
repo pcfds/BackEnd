@@ -29,6 +29,8 @@ public class PatientService {
         return patientiDao.search(id);
     }
 
+    public Patient searchEmail(String email) {return patientiDao.searchEmail(email);}
+
     public Patient update(Integer id, Patient patient) {
         return patientiDao.update(id,patient);
     }

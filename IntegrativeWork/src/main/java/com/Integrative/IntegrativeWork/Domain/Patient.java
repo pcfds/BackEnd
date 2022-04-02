@@ -1,23 +1,29 @@
 package com.Integrative.IntegrativeWork.Domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Patient {
 
     private Integer id;
     private String name;
     private String surname;
-    private Address address;
+    private String email;
     private int dni;
-    private Date dateInit;
+    private LocalDate initDate;
+    private Address address;
 
-    public Patient(Integer id, String name, String surname, Address address, int dni, Date dateInit) {
+    private Patient(){
+
+    }
+
+    public Patient(Integer id, String name, String surname, String email, int dni, LocalDate initDate, Address address) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.address = address;
+        this.email = email;
         this.dni = dni;
-        this.dateInit = dateInit;
+        this.initDate = initDate;
+        this.address = address;
     }
 
     public Integer getId() {
@@ -44,12 +50,12 @@ public class Patient {
         this.surname = surname;
     }
 
-    public Address getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getDni() {
@@ -60,23 +66,32 @@ public class Patient {
         this.dni = dni;
     }
 
-    public Date getDateInit() {
-        return dateInit;
+    public LocalDate getInitDate() {
+        return initDate;
     }
 
-    public void setDateInit(Date dateInit) {
-        this.dateInit = dateInit;
+    public void setInitDate(LocalDate initDate) {
+        this.initDate = initDate;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Patient{" +
-                "patient_id=" + id +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
                 ", dni=" + dni +
-                ", dateInit=" + dateInit +
+                ", initDate=" + initDate +
+                ", address=" + address +
                 '}';
     }
 }

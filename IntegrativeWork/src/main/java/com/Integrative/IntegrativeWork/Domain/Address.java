@@ -7,6 +7,10 @@ public class Address {
     private Integer number;
     private String city;
 
+    public Address(){
+
+    }
+
     public Address(Integer id, String street, Integer number, String city) {
         this.id = id;
         this.street = street;

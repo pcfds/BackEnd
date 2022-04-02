@@ -24,7 +24,8 @@ public class PatientDAOH2 implements iDao<Patient> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         AddressDAOH2 addressDaoH2 = new AddressDAOH2();
-        String SQL_INSERT = "INSERT INTO PATIENTS (NAME, LASTNAME, ADDRESS_ID,DNI,DATE_INIT) VALUES (?,?,?,?,?)";
+        Address address = patient.getAddress();
+        String SQL_INSERT = "INSERT INTO PATIENTS (NAME, SURNAME,EMAIL, DNI, dateInit, address_id) VALUES (?,?,?,?,?.?)";
         Patient patient1 = null;
 
         try {
@@ -32,12 +33,13 @@ public class PatientDAOH2 implements iDao<Patient> {
             Class.forName(DB_JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URl, DB_USER, DB_PASS);
             preparedStatement = connection.prepareStatement(SQL_INSERT, PreparedStatement.RETURN_GENERATED_KEYS);
-            Address address = patient.getAddress();
             preparedStatement.setString(1, patient.getName());
             preparedStatement.setString(2, patient.getSurname());
-            preparedStatement.setInt(3, addressDaoH2.register(address).getId());
+            preparedStatement.setString(3, patient.getEmail());
             preparedStatement.setInt(4, patient.getDni());
-            preparedStatement.setDate(5, new java.sql.Date(patient.getDateInit().getTime()));
+            preparedStatement.setDate(5,Date.valueOf(patient.getInitDate()));
+            preparedStatement.setInt(6, patient.getAddress().getId());
+
             preparedStatement.executeUpdate();
             ResultSet keys = preparedStatement.getGeneratedKeys();
 
@@ -73,7 +75,33 @@ public class PatientDAOH2 implements iDao<Patient> {
             logger.info("Patient found");
             if (resultSet.next()) {
                 Address address = addressDaoH2.search(resultSet.getInt("ADDRESS_ID"));
-                patient = new Patient(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), address, resultSet.getInt(5), new Date(resultSet.getDate(6).getTime()));
+                patient = new Patient(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getDate(6).toLocalDate(), address);
+            }
+            preparedStatement.close();
+            connection.close();
+            logger.info("Patient searched successfully");
+        } catch (Exception e) {
+            logger.error("Search Patient Error, " + e.getMessage());
+        }
+        return patient;
+    }
+
+    @Override
+    public Patient searchEmail(String email) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        Patient patient = null;
+        String SQL_SELECT = "SELECT * FROM PATIENTS WHERE EMAIL = ?";
+        try {
+            logger.info("Searching patient");
+            connection = DriverManager.getConnection(DB_URl, DB_USER, DB_PASS);
+            preparedStatement = connection.prepareStatement(SQL_SELECT);
+            preparedStatement.setString(4, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            logger.info("Patient found");
+            if (resultSet.next()) {
+                Address address = addressDaoH2.search(resultSet.getInt(7));
+                patient = new Patient(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getDate(6).toLocalDate(), address);
             }
             preparedStatement.close();
             connection.close();
@@ -89,7 +117,7 @@ public class PatientDAOH2 implements iDao<Patient> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Patient patient1 = null;
-        String SQL_UPDATE = "UPDATE PATIENTS SET NAME = ?, LASTNAME = ?, ADDRESS_ID = ?, DNI = ?, DATE_INIT = ? WHERE ID = ?";
+        String SQL_UPDATE = "UPDATE PATIENTS SET NAME = ?, SURNAME = ?, EMAIL = ?, DNI = ?, DATE_INIT = ? WHERE ID = ?";
         try {
             logger.info("Updating patient");
             Class.forName(DB_JDBC_DRIVER);
@@ -97,10 +125,9 @@ public class PatientDAOH2 implements iDao<Patient> {
             preparedStatement = connection.prepareStatement(SQL_UPDATE);
             preparedStatement.setString(1, patient.getName());
             preparedStatement.setString(2, patient.getSurname());
-            preparedStatement.setInt(3, addressDaoH2.update(patient.getAddress().getId(), patient.getAddress()).getId());
+            preparedStatement.setString(3, patient.getEmail());
             preparedStatement.setInt(4, patient.getDni());
-            preparedStatement.setDate(5, new java.sql.Date(patient.getDateInit().getTime()));
-            preparedStatement.setInt(6, id);
+            preparedStatement.setDate(5,Date.valueOf(patient.getInitDate()));
             preparedStatement.executeUpdate();
             preparedStatement.close();
             connection.close();
@@ -148,7 +175,7 @@ public class PatientDAOH2 implements iDao<Patient> {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Address address = addressDaoH2.search(resultSet.getInt("ADDRESS_ID"));
-                patientsList.add(new Patient(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), address, resultSet.getInt(5), new Date(resultSet.getDate(6).getTime())));
+                patientsList.add(new Patient(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getDate(6).toLocalDate(), address));
             }
             preparedStatement.close();
             connection.close();
