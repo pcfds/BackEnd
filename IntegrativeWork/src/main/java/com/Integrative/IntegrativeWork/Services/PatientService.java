@@ -2,8 +2,11 @@ package com.Integrative.IntegrativeWork.Services;
 
 import com.Integrative.IntegrativeWork.Repository.iDao;
 import com.Integrative.IntegrativeWork.Domain.Patient;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
 
 public class PatientService {
 
@@ -29,10 +32,12 @@ public class PatientService {
         return patientiDao.search(id);
     }
 
-    public Patient searchEmail(String email) {return patientiDao.searchEmail(email);}
+    public Patient searchEmail(String email) {
+        return patientiDao.searchEmail(email);
+    }
 
     public Patient update(Integer id, Patient patient) {
-        return patientiDao.update(id,patient);
+        return patientiDao.update(id, patient);
     }
 
     public void delete(Integer id) {

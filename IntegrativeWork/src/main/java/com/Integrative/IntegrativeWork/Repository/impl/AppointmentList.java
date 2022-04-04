@@ -4,11 +4,12 @@ import com.Integrative.IntegrativeWork.Domain.Appointment;
 import com.Integrative.IntegrativeWork.Domain.Dentist;
 import com.Integrative.IntegrativeWork.Domain.Patient;
 import com.Integrative.IntegrativeWork.Repository.iDao;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class AppointmentList implements iDao<Appointment> {
     private List<Appointment> appointments;
 

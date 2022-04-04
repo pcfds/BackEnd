@@ -19,8 +19,8 @@ import java.util.List;
 
 public class DentistController {
 
-
-    private DentistService dentistService = new DentistService(new DentistDAOH2());
+    @Autowired
+    private DentistService dentistService;
 
     @PostMapping()
     public ResponseEntity<Dentist> registerDentist(@RequestBody Dentist dentist) {
@@ -40,7 +40,7 @@ public class DentistController {
     public ResponseEntity<Dentist> update(@RequestBody Dentist dentist) {
         ResponseEntity<Dentist> response = null;
 
-        if (dentist.getId() != null && dentistService.search(dentist.getId())!= null)
+        if (dentist.getId() != null && dentistService.search(dentist.getId()) != null)
             response = ResponseEntity.ok(dentistService.update(dentist.getId(), dentist));
         else
             response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -61,8 +61,9 @@ public class DentistController {
 
         return response;
     }
+
     @GetMapping
-    public ResponseEntity<List<Dentist>> searchAll(){
+    public ResponseEntity<List<Dentist>> searchAll() {
         return ResponseEntity.ok(dentistService.searchAll());
     }
 }

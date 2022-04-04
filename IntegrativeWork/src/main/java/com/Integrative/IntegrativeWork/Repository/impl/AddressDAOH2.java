@@ -3,6 +3,7 @@ package com.Integrative.IntegrativeWork.Repository.impl;
 import com.Integrative.IntegrativeWork.Repository.iDao;
 import com.Integrative.IntegrativeWork.Domain.Address;
 import org.slf4j.Logger;
+import org.springframework.stereotype.Repository;
 
 
 import java.sql.Connection;
@@ -11,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
+@Repository
 
 public class AddressDAOH2 implements iDao<Address> {
 

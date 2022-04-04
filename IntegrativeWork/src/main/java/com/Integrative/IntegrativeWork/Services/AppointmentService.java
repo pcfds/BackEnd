@@ -3,10 +3,14 @@ package com.Integrative.IntegrativeWork.Services;
 import com.Integrative.IntegrativeWork.Domain.Appointment;
 import com.Integrative.IntegrativeWork.Domain.Dentist;
 import com.Integrative.IntegrativeWork.Repository.iDao;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+
 public class AppointmentService {
+
     private iDao<Appointment> appointmentiDao;
 
     public AppointmentService (iDao<Appointment> appointmentiDao) {

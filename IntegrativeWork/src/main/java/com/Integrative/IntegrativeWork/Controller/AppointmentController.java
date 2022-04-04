@@ -9,6 +9,7 @@ import com.Integrative.IntegrativeWork.Repository.impl.PatientDAOH2;
 import com.Integrative.IntegrativeWork.Services.AppointmentService;
 import com.Integrative.IntegrativeWork.Services.DentistService;
 import com.Integrative.IntegrativeWork.Services.PatientService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +21,11 @@ import java.util.List;
 
 public class AppointmentController {
 
-    private PatientService patientService = new PatientService(new PatientDAOH2());
-    private DentistService dentistService = new DentistService(new DentistDAOH2());
-    private AppointmentService appointmentService = new AppointmentService(new AppointmentList());
+    @Autowired
+
+    private PatientService patientService;
+    private DentistService dentistService;
+    private AppointmentService appointmentService;
 
     @GetMapping
     public ResponseEntity<List<Appointment>> searchAll() {
@@ -36,7 +39,7 @@ public class AppointmentController {
         Patient searchPatient = patientService.search(appointment.getPatient().getId());
         Dentist searchDentist = dentistService.search(appointment.getDentist().getId());
 
-        if (searchPatient != null && searchPatient != null) {
+        if (searchPatient != null) {
             response = ResponseEntity.ok(appointmentService.register(appointment));
         } else {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();

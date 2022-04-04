@@ -4,11 +4,14 @@ import com.Integrative.IntegrativeWork.Repository.iDao;
 import com.Integrative.IntegrativeWork.Domain.Address;
 import com.Integrative.IntegrativeWork.Domain.Patient;
 import org.slf4j.Logger;
+import org.springframework.stereotype.Repository;
 
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+@Repository
 
 public class PatientDAOH2 implements iDao<Patient> {
     Logger logger = org.slf4j.LoggerFactory.getLogger(PatientDAOH2.class);

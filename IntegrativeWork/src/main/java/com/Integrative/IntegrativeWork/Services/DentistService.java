@@ -2,13 +2,12 @@ package com.Integrative.IntegrativeWork.Services;
 
 import com.Integrative.IntegrativeWork.Repository.iDao;
 import com.Integrative.IntegrativeWork.Domain.Dentist;
-
+import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 
-
-
+@Service
 public class DentistService {
     private iDao<Dentist> dentistIdao;
 
