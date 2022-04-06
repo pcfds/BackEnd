@@ -1,7 +1,18 @@
 package com.dh.mascotas.persistence.entities;
 
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+
+
+// esto trae Getter, Setter y To String
+// @Data
+
+@Getter
+@Setter
 
 @Entity
 public class Movimiento {
@@ -13,6 +24,8 @@ public class Movimiento {
     private String descripcion;
     @Column
     private String monto;
+
+    // se pueden llamar con Getter y Setter de Lombok
 
     public Integer getId() {
         return id;
@@ -37,4 +50,6 @@ public class Movimiento {
     public void setMonto(String monto) {
         this.monto = monto;
     }
+
+
 }
