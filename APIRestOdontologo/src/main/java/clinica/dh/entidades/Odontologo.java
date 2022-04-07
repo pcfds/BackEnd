@@ -1,8 +1,6 @@
 package clinica.dh.entidades;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -12,6 +10,7 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "odontologo")
+
 public class Odontologo {
 
     @Id

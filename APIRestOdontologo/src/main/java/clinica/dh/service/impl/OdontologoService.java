@@ -1,5 +1,4 @@
 package clinica.dh.service.impl;
-
 import clinica.dh.dto.OdontologoDTO;
 import clinica.dh.entidades.Odontologo;
 import clinica.dh.repositorio.IOdontologoRepositorio;
@@ -8,7 +7,6 @@ import com.sun.istack.NotNull;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -61,9 +59,14 @@ public class OdontologoService implements IOdontologoService {
     @Override
     public List<OdontologoDTO> findAll() {
         List<Odontologo> odontologoList = odontologoRepositorio.findAll();
-
         List<OdontologoDTO> odontologoDTOList = odontologoList.stream().map(odontologo -> mapDTO(odontologo)).collect(Collectors.toList());
         return odontologoDTOList;
+    }
+
+    @Override
+    public OdontologoDTO getOdontologoByName(String name) {
+        Odontologo odontologo=odontologoRepositorio.findOdontologoByNombre(name);
+        return mapDTO(odontologo);
     }
 
     //------ MAPPER----
@@ -76,4 +79,6 @@ public class OdontologoService implements IOdontologoService {
         Odontologo odontologo = modelMapper.map(odontologoDTO, Odontologo.class);
         return odontologo;
     }
+
+
 }
