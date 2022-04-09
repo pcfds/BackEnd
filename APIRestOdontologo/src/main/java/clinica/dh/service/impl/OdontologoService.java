@@ -34,7 +34,8 @@ public class OdontologoService implements IOdontologoService {
         //DTO recibiendo por parametro
         //1- DTO convertir a entidad
         Odontologo odontologo = mapEntity(odontologoDTO);
-        //2- la entidad guardamos en la base de datos
+        //DTO recibiendo por parametro
+        //1- DTO convertir a entidad
         Odontologo newOdontologoSave = odontologoRepositorio.save(odontologo);
         //3- la entidad guardada en la base de datos la retornamos como DTO
         return mapDTO(newOdontologoSave);
