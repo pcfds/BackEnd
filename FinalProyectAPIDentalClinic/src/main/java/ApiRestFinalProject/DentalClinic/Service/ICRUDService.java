@@ -1,4 +1,4 @@
-package ApiRestFinalProject.DentalClinic.Service.impl;
+package ApiRestFinalProject.DentalClinic.Service;
 
 import java.util.List;
 

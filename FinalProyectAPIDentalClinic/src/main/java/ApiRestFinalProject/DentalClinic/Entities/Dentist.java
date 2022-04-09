@@ -1,5 +1,6 @@
 package ApiRestFinalProject.DentalClinic.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "dentist")
+@Table(name = "dentists")
 
 public class Dentist {
 
@@ -20,6 +21,7 @@ public class Dentist {
     private String surname;
     private String register;
     @OneToMany(mappedBy = "dentist", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<Appointment> appointments = new HashSet<>();
 
 
