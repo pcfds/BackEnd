@@ -4,73 +4,66 @@ import ApiRestFinalProject.DentalClinic.DTO.AppointmentDTO;
 import ApiRestFinalProject.DentalClinic.Entities.Appointment;
 import ApiRestFinalProject.DentalClinic.Repository.IAppointmentRespository;
 import ApiRestFinalProject.DentalClinic.Service.IAppointmentService;
-import com.sun.istack.NotNull;
-import org.modelmapper.ModelMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
+import java.util.Set;
+
 
 @Service
-
 public class AppointmentService implements IAppointmentService {
 
     @Autowired
-    private ModelMapper modelMapper;
+    private IAppointmentRespository appointmentRepository;
     @Autowired
-    private IAppointmentRespository iAppointmentRespository;
-
-    public AppointmentDTO create (AppointmentDTO appointmentDTO){
-        Appointment appointment = mapEntity(appointmentDTO);
-
-        Appointment appointmentSave = iAppointmentRespository.save(appointment);
-
-        return mapDTO(appointmentSave);
-    }
-
-    public AppointmentDTO findById(@NotNull Integer id){
-        Appointment appointment = iAppointmentRespository.getById(id);
-        AppointmentDTO aDTO = mapDTO(appointment);
-        return aDTO;
-    }
-
-    public List<AppointmentDTO> findAll(){
-        List<Appointment> appointmentList = iAppointmentRespository.findAll();
-
-        List<AppointmentDTO> appointmentsDTOList = appointmentList.stream().map(a -> mapDTO(a)).collect(Collectors.toList());
-
-        return appointmentsDTOList;
-
-    }
-
-    public void deleteById (@NotNull Integer id){
-        Appointment appointment = iAppointmentRespository.getById(id);
-
-        iAppointmentRespository.delete(appointment);
-
-    }
-
-    public AppointmentDTO update(AppointmentDTO appointmentDTO){
-        Appointment appointment = mapEntity(appointmentDTO);
-
-        Appointment newAppointment = iAppointmentRespository.save(appointment);
-
-        return mapDTO(newAppointment);
-
-    }
+    ObjectMapper objectMapper;
 
 
+    @Override
+    public AppointmentDTO findById(Integer id) {
 
-    //------ MAPPER----
-    private AppointmentDTO mapDTO(Appointment appointment){
-        AppointmentDTO appointmentDTO = modelMapper.map(appointment, AppointmentDTO.class); //Recibo un turno y lo paso a DTO
+        Optional<Appointment> appointment = appointmentRepository.findById(id);
+        AppointmentDTO appointmentDTO = null;
+        if(appointment.isPresent())
+            appointmentDTO = objectMapper.convertValue(appointment, AppointmentDTO.class);
         return appointmentDTO;
     }
 
-    private Appointment mapEntity(AppointmentDTO appointmentDTO){
-        Appointment appointment = modelMapper.map(appointmentDTO, Appointment.class); //Recibo un DTO y lo paso a turno
-        return appointment;
+    @Override
+    public AppointmentDTO create(AppointmentDTO appointmentDTO) {
+
+        Appointment appointment = objectMapper.convertValue(appointmentDTO, Appointment.class);
+        appointmentRepository.save(appointment);
+        return appointmentDTO;
     }
 
+    @Override
+    public void deleteById(Integer id) {
+        appointmentRepository.deleteById(id);
+
+    }
+
+    @Override
+    public AppointmentDTO update(AppointmentDTO appointmentDTO) {
+
+        Appointment appointment = objectMapper.convertValue(appointmentDTO, Appointment.class);
+        appointmentRepository.save(appointment);
+        return appointmentDTO;
+    }
+
+    @Override
+    public Set<AppointmentDTO> findAll() {
+        List<Appointment> appointments = appointmentRepository.findAll();
+        Set<AppointmentDTO> appointmentDTOS = new HashSet<>();
+        for (Appointment appointment : appointments) {
+            appointmentDTOS.add(objectMapper.convertValue(appointment, AppointmentDTO.class));
+        }
+        return appointmentDTOS;
+    }
 }

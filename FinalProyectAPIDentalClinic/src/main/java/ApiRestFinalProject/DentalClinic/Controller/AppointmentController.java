@@ -45,10 +45,10 @@ public class AppointmentController {
         return response;
     }
 
-    @GetMapping("/findAll")
-    public ResponseEntity<List<AppointmentDTO>> findAll() {
-        return ResponseEntity.ok(appointmentService.findAll());
-    }
+//    @GetMapping("/findAll")
+//    public ResponseEntity<List<AppointmentDTO>> findAll() {
+//        return ResponseEntity.ok(appointmentService.findAll());
+//    }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") int id){

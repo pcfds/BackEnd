@@ -63,10 +63,10 @@ public class PatientController {
 
         return response;
     }
-
-    @GetMapping("/findAll")
-    public List<PatientDTO> findAllPatients(){
-        return patientService.findAll();
-    }
+//
+//    @GetMapping("/findAll")
+////    public Set<PatientDTO> findAllPatients(){
+////        return patientService.findAll();
+////    }
 
 }

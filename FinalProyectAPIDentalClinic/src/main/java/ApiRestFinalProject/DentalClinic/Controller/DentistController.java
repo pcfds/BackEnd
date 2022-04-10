@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @RestController
@@ -68,7 +69,7 @@ public class DentistController {
 //    }
 
     @GetMapping("/findAll")
-    public List<DentistDTO> findAllDentist(){
+    public Set<DentistDTO> findAllDentist(){
         return dentistService.findAll();
     }
 

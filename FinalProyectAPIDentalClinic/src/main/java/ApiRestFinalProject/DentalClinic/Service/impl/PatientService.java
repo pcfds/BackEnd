@@ -1,83 +1,73 @@
 package ApiRestFinalProject.DentalClinic.Service.impl;
 
 ;
+
 import ApiRestFinalProject.DentalClinic.DTO.PatientDTO;
 import ApiRestFinalProject.DentalClinic.Entities.Patient;
 import ApiRestFinalProject.DentalClinic.Repository.IPatientRepository;
 import ApiRestFinalProject.DentalClinic.Service.IPatientService;
-import com.sun.istack.NotNull;
-import org.modelmapper.ModelMapper;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
-
 public class PatientService implements IPatientService {
-    @Autowired
-    private IPatientRepository iPatientRepository;
-    @Autowired
-    private ModelMapper modelMapper;
 
-    //------ MAPPER----
-    private PatientDTO mapDTO(Patient patient){
-        PatientDTO patientDTO = modelMapper.map(patient, PatientDTO.class);
+    @Autowired
+    private IPatientRepository patientRepository;
+
+    // vamos a mapear
+    @Autowired
+    ObjectMapper objectMapper;
+
+// encontrar un usuario por id
+    @Override
+    public PatientDTO findById(Integer id) {
+
+        Optional<Patient> patient = patientRepository.findById(id);
+        PatientDTO patientDTO = null;
+        if(patient.isPresent())
+            patientDTO = objectMapper.convertValue(patient, PatientDTO.class);
         return patientDTO;
     }
-
-    private Patient mapEntity(PatientDTO patientDTO){
-        Patient newPatient  = modelMapper.map(patientDTO, Patient.class);
-        return newPatient;
-    }
+// crear un usuario
     @Override
-    public PatientDTO create (PatientDTO patientDTO) {
-        //1. Lo tengo que pasar de DTO a entidad.
-        Patient patient = mapEntity(patientDTO);
+    public PatientDTO create(PatientDTO patientDTO) {
+        Patient patient = objectMapper.convertValue(patientDTO, Patient.class);
+        patientRepository.save(patient);
+        return patientDTO;
 
-        //2. Lo guardo en la bd.
-        Patient patientSave = iPatientRepository.save(patient);
-
-        //3. Lo vuelvo a convertir a DTO y la retorno
-        return mapDTO(patientSave);
     }
- @Override
-    public PatientDTO findById(@NotNull Integer id) {
-        Patient patient = iPatientRepository.findById(id).orElse(null);
-        return mapDTO(patient);
-
-//        Patient patient = iPatientRepository.getById(id);
-//        PatientDTO pDTO = mapDTO(patient);
-//        return pDTO;
+// eliminar un usuario por id
+    @Override
+    public void deleteById(Integer id) {
+        patientRepository.deleteById(id);
     }
 
-    public List<PatientDTO> findAll() {
-        //1. Creo una lista de todos los pacientes que hay
-        List<Patient> patientsList = iPatientRepository.findAll();
 
-        //2. Los paso a DTO para retornarlos
-        List<PatientDTO> patientsDTOList = patientsList.stream().map(p -> mapDTO(p)).collect(Collectors.toList());
-        return patientsDTOList;
-    }
-
-    public void deleteById(@NotNull Integer id ) {
-        // 1. Buscar la entidad
-        Patient patient = iPatientRepository.getById(id);
-        // 2. Verficar que se encontro
-        // 3. Elimino el ojeto paciente entero
-        iPatientRepository.delete(patient);
-    }
-
+// actualizar un usuario
+    @Override
     public PatientDTO update(PatientDTO patientDTO) {
-        //1. Casteo el pacienteDTO a paciente
-        Patient patient = mapEntity(patientDTO);
+        Patient patient = objectMapper.convertValue(patientDTO, Patient.class);
+        patientRepository.save(patient);
+        return patientDTO;
 
-        //2. Lo guardo al nuevo paciente
-        Patient newPatient = iPatientRepository.save(patient);
-
-        //3. Lo casteo a DTO y lo retorno
-        return mapDTO(newPatient);
+    }
+// listar todos los usuarios
+    @Override
+    public Set<PatientDTO> findAll() {
+        List<Patient> patients = patientRepository.findAll();
+        Set<PatientDTO> patientDTOS = new HashSet<>();
+        for (Patient patient : patients) {
+            patientDTOS.add(objectMapper.convertValue(patient, PatientDTO.class));
+        }
+        return patientDTOS;
     }
 
-}
+    }
