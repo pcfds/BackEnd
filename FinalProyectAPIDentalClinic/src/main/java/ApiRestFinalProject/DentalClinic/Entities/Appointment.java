@@ -3,7 +3,7 @@ package ApiRestFinalProject.DentalClinic.Entities;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -21,5 +21,7 @@ public class Appointment {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "dentist_id", nullable = false)
     private Dentist dentist;
-    private Date date;
+    private LocalDate date;
+
+
 }

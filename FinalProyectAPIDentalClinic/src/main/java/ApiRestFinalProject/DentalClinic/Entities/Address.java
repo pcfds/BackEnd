@@ -19,4 +19,5 @@ public class Address {
     @OneToOne(mappedBy = "address")
     private Patient patient;
 
+
 }

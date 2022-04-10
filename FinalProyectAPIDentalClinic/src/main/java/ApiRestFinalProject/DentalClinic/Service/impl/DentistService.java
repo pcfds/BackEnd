@@ -4,12 +4,16 @@ import ApiRestFinalProject.DentalClinic.DTO.DentistDTO;
 import ApiRestFinalProject.DentalClinic.Entities.Dentist;
 import ApiRestFinalProject.DentalClinic.Repository.IDentistRepository;
 import ApiRestFinalProject.DentalClinic.Service.IDentistService;
+import com.sun.istack.NotNull;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
 
 public class DentistService implements IDentistService {
 
@@ -29,40 +33,57 @@ public class DentistService implements IDentistService {
         return newdentist;
     }
 
-
-    @Override
-    public DentistDTO findById(@NotNull Integer id) {
-        Optional<Dentist> dentist = iDentistRepository.findById(id);
-        DentistDTO dentistDTO = mapDTO(dentist.get());
-        return dentistDTO;
-    }
-
-    @Override
-    public DentistDTO create(DentistDTO dentistDTO) {
-        //DTO recibiendo por parametro
-        //1- DTO convertir a entidad
+    public DentistDTO create (DentistDTO dentistDTO) {
+        //1. Lo tengo que pasar de DTO a entidad.
         Dentist dentist = mapEntity(dentistDTO);
-        //DTO recibiendo por parametro
-        //1- DTO convertir a entidad
-        Dentist dentist1 = iDentistRepository.save(dentist);
-        //3- la entidad guardada en la base de datos la retornamos como DTO
-        return mapDTO(dentist1);
 
+        //2. Lo guardo en la bd.
+        Dentist dentistSave = iDentistRepository.save(dentist);
 
-    }
-
-    @Override
-    public void deleteById(Integer id) {
+        //3. Lo vuelvo a convertir a DTO y la retorno
+        return mapDTO(dentistSave);
 
     }
 
-    @Override
-    public DentistDTO update(DentistDTO dentistDTO) {
-        return null;
+    // @Override
+    public DentistDTO findById(@com.sun.istack.NotNull Integer id) {
+        Dentist dentist = iDentistRepository.getById(id);
+        DentistDTO dDTO = mapDTO(dentist);
+        return dDTO;
+
     }
 
-    @Override
+   /* public Dentist findByEmail(String email) {
+        return dentistRepository.finByEmail(email);
+    }*/
+
     public List<DentistDTO> findAll() {
-        return null;
+        //1. Creo una lista de todos los pacientes que hay
+        List<Dentist> dentistsList = iDentistRepository.findAll();
+
+        //2. Los paso a DTO para retornarlos
+        List<DentistDTO> dentistDTOList = dentistsList.stream().map(d -> mapDTO(d)).collect(Collectors.toList());
+        return dentistDTOList;
+        //  return dentistRepository.findAll();
+    }
+
+    public void deleteById(@NotNull Integer id) {
+        // 1. Buscar la entidad
+        Dentist dentist = iDentistRepository.getById(id);
+        // 2. Verficar que se encontro
+        // 3. Eliminarla
+        iDentistRepository.delete(dentist);
+        // dentistRepository.delete(id);
+    }
+
+    public DentistDTO update(DentistDTO dentistDTO) {
+        //1. Casteo el dentistaDTO a dentista
+        Dentist dentist = mapEntity(dentistDTO);
+
+        //2. Lo guardo al nuevo dentista
+        Dentist newDentist = iDentistRepository.save(dentist);
+
+        //3. Lo casteo a DTO y lo retorno
+        return mapDTO(newDentist);
     }
 }
