@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface IPatientRepository extends JpaRepository<Patient, Integer> {
 
-//// Buscar  por email dentist
-//@Query("SELECT d FROM Dentist WHERE Dentist.email = ?1")
-// Optional<Patient> SearchByEmail (String email);
+// Buscar  por email dentist
+@Query("SELECT d FROM Dentist WHERE Dentist.email = ?1")
+Optional<Dentist> findByEmail(String email);
 }

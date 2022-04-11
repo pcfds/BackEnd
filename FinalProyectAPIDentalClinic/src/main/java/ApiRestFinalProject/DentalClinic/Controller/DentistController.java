@@ -1,6 +1,7 @@
 package ApiRestFinalProject.DentalClinic.Controller;
 
 import ApiRestFinalProject.DentalClinic.DTO.DentistDTO;
+import ApiRestFinalProject.DentalClinic.DTO.PatientDTO;
 import ApiRestFinalProject.DentalClinic.Service.impl.DentistService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +9,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/dentist")
+@RequestMapping("/dentists")
 public class DentistController {
 
     //Para que me traiga y poder usar todo lo que tengo en DentistService
@@ -21,57 +23,33 @@ public class DentistController {
     private final DentistService dentistService;
 
     @PostMapping("/register")
-    public ResponseEntity<DentistDTO> create (@RequestBody DentistDTO dentistDTO) {
-        DentistDTO dDTO = dentistService.create(dentistDTO);
-        return new ResponseEntity<>(dDTO, HttpStatus.OK);
-        //  return ResponseEntity.ok(dentistService.registerDentist(dDTO)); //no entieno
+    public ResponseEntity<?> create(@RequestBody DentistDTO dentistDTO) {
+        dentistService.create(dentistDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
-    @GetMapping("/find/{id}")
-    public ResponseEntity<DentistDTO> findById(@PathVariable("id") Integer id) { //Que me compare con la columna id, el integer id
-        DentistDTO dDTO = dentistService.findById(id);
-
-        // return new ResponseEntity<>(odontologoDTO, HttpStatus.OK);
-        //Poruqe esta asi??
-        return ResponseEntity.ok(dDTO);
+    @GetMapping("/{id}")
+    public ResponseEntity<DentistDTO> findDentistById( @PathVariable Integer id) {
+        DentistDTO dentistDTO = dentistService.findById(id);
+        return new ResponseEntity<>(dentistDTO, HttpStatus.OK);
     }
 
-    @PutMapping()
-    public ResponseEntity<DentistDTO> update(@RequestBody DentistDTO dentistDTO) {
-        ResponseEntity<DentistDTO> response = null;
-
-        if (dentistDTO.getId() != null && dentistService.findById(dentistDTO.getId()) != null)
-            response = ResponseEntity.ok(dentistService.update(dentistDTO));
-        else
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-
-        return response;
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody DentistDTO dentistDTO) {
+        dentistService.update(dentistDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteDentist(@PathVariable("id") Integer id) {
-        ResponseEntity<String> response = null;
-
-        if (dentistService.findById(id) != null) {
-            dentistService.deleteById(id);
-            response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
-        } else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-
-        return response;
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Integer id) {
+        dentistService.deleteById(id);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
-//    @GetMapping("/findAll")
-//    public ResponseEntity<List<Dentist>> findAll(){
-//        return ResponseEntity.ok(dentistService.findAll());
-//    }
-
-    @GetMapping("/findAll")
-    public Set<DentistDTO> findAllDentist(){
+    @GetMapping("/lists")
+    public Collection<DentistDTO> findAll() {
         return dentistService.findAll();
+
     }
-
 }
-

@@ -1,6 +1,8 @@
 package ApiRestFinalProject.DentalClinic.Controller;
 
+
 import ApiRestFinalProject.DentalClinic.DTO.PatientDTO;
+import ApiRestFinalProject.DentalClinic.Entities.Patient;
 import ApiRestFinalProject.DentalClinic.Service.impl.PatientService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,65 +10,48 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Collection;
+
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/patient")
+@RequestMapping("/patients")
 public class PatientController {
 
-    //Para que me traiga y poder usar todo lo que tengo en PatientService
     @Autowired
-    private final PatientService patientService;
+    PatientService patientService;
 
-    @PostMapping("/register")
-    public ResponseEntity<PatientDTO> create (@RequestBody PatientDTO patientDTO) {
-        PatientDTO pDTO = patientService.create(patientDTO);
-        return new ResponseEntity<>(pDTO, HttpStatus.OK);
-        //return ResponseEntity.ok(patientService.registerPatient(patient));
+        @PostMapping("/register")
+        public ResponseEntity<?> create (@RequestBody PatientDTO patientDTO) {
+            patientService.create(patientDTO);
+            return ResponseEntity.ok(HttpStatus.OK);
 
-    }
-
-    @GetMapping("/find/{id}")
-    public ResponseEntity<PatientDTO> findById(@PathVariable("id") Integer id) {
-        PatientDTO pDTO = patientService.findById(id);
-        return new ResponseEntity<>(pDTO, HttpStatus.OK);
-        //return ResponseEntity.ok(pDTO);
-    }
-
-    @PutMapping()
-    public ResponseEntity<PatientDTO> update (@RequestBody PatientDTO patientDTO) {
-        ResponseEntity<PatientDTO> response = null;
-
-        //Si el id no es nulo y si ese paciente existe....
-        if (patientDTO.getId() != null && patientService.findById(patientDTO.getId()) != null) {
-            //Me actualiza
-            response = ResponseEntity.ok(patientService.update(patientDTO));
         }
-        else {
-            //Me tira error
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+        @GetMapping("/{id}")
+        public ResponseEntity<PatientDTO> findPatientById(@PathVariable Integer id) {
+             PatientDTO patientDTO  = patientService.findById(id);
+            return new ResponseEntity<>(patientDTO, HttpStatus.OK);
         }
-        return response;
-    }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deletePatient(@PathVariable("id") Integer id) {
-        ResponseEntity<String> response = null;
+        @PutMapping("/update")
+        public ResponseEntity<?> update (@RequestBody PatientDTO patientDTO) {
+            patientService.update(patientDTO);
+            return ResponseEntity.ok(HttpStatus.OK);
+        }
 
-        if (patientService.findById(id) != null) {
+        @DeleteMapping("/{id}")
+        public ResponseEntity<?> delete (@PathVariable Integer id) {
             patientService.deleteById(id);
-            response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
-        } else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.ok(HttpStatus.OK);
         }
 
-        return response;
-    }
-//
-//    @GetMapping("/findAll")
-////    public Set<PatientDTO> findAllPatients(){
-////        return patientService.findAll();
-////    }
+        @GetMapping("/lists")
+        public Collection<PatientDTO> findAll() {
+            return patientService.findAll();
 
+        }
 }
+
+
+

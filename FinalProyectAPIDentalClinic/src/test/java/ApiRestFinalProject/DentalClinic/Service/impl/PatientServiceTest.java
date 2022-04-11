@@ -28,20 +28,20 @@ class PatientServiceTest {
 
     }
 
-    @Test
-    public void testDeletePatient(){
-        PatientDTO patientDTO = new PatientDTO();
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-
-        patientService.create(patientDTO);
-        patientService.deleteById(1);
-
-        PatientDTO patientPedro = patientService.findById(1);
-
-
-        assertTrue( patientPedro == null);
-
-    }
+//    @Test
+//    public void testDeletePatient(){
+//        PatientDTO patientDTO = new PatientDTO();
+//        patientDTO.setName("Pedro");
+//        patientDTO.setSurname("Castro");
+//
+//        patientService.create(patientDTO);
+//        patientService.deleteById(1);
+//
+//        PatientDTO patientPedro = patientService.findById(1);
+//
+//
+//        assertTrue( patientPedro == null);
+//
+//    }
 
 }

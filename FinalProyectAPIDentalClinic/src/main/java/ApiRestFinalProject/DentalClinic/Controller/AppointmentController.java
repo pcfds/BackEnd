@@ -1,68 +1,53 @@
 package ApiRestFinalProject.DentalClinic.Controller;
 
 import ApiRestFinalProject.DentalClinic.DTO.AppointmentDTO;
-import ApiRestFinalProject.DentalClinic.DTO.DentistDTO;
-import ApiRestFinalProject.DentalClinic.DTO.PatientDTO;
 import ApiRestFinalProject.DentalClinic.Service.impl.AppointmentService;
-import ApiRestFinalProject.DentalClinic.Service.impl.DentistService;
-import ApiRestFinalProject.DentalClinic.Service.impl.PatientService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Collection;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/appointment")
+@RequestMapping("/appointments")
 public class AppointmentController {
 
     @Autowired
-    private AppointmentService appointmentService;
+    AppointmentService appointmentService;
 
-    @Autowired
-    private PatientService patientService;
+        @PostMapping("/register")
+    public ResponseEntity<?> create(@RequestBody AppointmentDTO appointmentDTO) {
+        appointmentService.create(appointmentDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
 
-    @Autowired
-    private DentistService dentistService;
-
-    @PostMapping("/register")
-    public ResponseEntity<AppointmentDTO> create (@RequestBody AppointmentDTO appointmentDTO) {
-        ResponseEntity<AppointmentDTO> response;
-
-
-        PatientDTO patientBusDTO = patientService.findById(appointmentDTO.getPatient().getId());
-        DentistDTO dentistBusDTO = dentistService.findById(appointmentDTO.getDentist().getId());
-
-        if (patientBusDTO != null && dentistBusDTO != null) {
-            response = ResponseEntity.ok(appointmentService.create(appointmentDTO));
-       }
-       else {
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-       }
-        return response;
     }
 
-//    @GetMapping("/findAll")
-//    public ResponseEntity<List<AppointmentDTO>> findAll() {
-//        return ResponseEntity.ok(appointmentService.findAll());
-//    }
+    @GetMapping("/{id}")
+    public  ResponseEntity<AppointmentDTO>  findAppointmentById(@PathVariable Integer id) {
+        AppointmentDTO appointmentDTO = appointmentService.findById(id);
+        return new ResponseEntity<>(appointmentDTO, HttpStatus.OK);
+    }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> delete(@PathVariable("id") int id){
-        ResponseEntity<String> response;
-        //controlar el id
-        if (appointmentService.findById(id)!=null){
-            //existe
-            appointmentService.deleteById(id);
-            response= ResponseEntity.status(HttpStatus.OK).body("Turno con id = " + id + " eliminado");
-        }
-        else{
-            response=ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontro un turno con el id = " + id);
-        }
-        return response;
+
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody AppointmentDTO appointmentDTO) {
+        appointmentService.update(appointmentDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Integer id) {
+        appointmentService.deleteById(id);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @GetMapping("/lists")
+    public Collection<AppointmentDTO> findAll() {
+        return appointmentService.findAll();
+
     }
 
 }

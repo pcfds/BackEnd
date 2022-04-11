@@ -16,8 +16,7 @@ public class Address {
     private String street;
     private Integer number;
     private String city;
-    @OneToOne(mappedBy = "address")
-    private Patient patient;
+
 
 
 }
