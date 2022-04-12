@@ -32,7 +32,7 @@ public class Patient {
 
     @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
     @JsonIgnore
-    private Set<Appointment> appointment = new HashSet<>();
+    private Set<Appointment> appointments;
 
 
 }

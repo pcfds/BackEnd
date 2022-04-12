@@ -18,6 +18,7 @@ public class PatientDTO {
     private Integer dni;
     private LocalDate initDate;
     private AddressDTO address;
-    private Set<Appointment> appointment = new HashSet<>();
+
+
 
 }

@@ -13,6 +13,7 @@ public class DentistDTO {
     private String name;
     private String surname;
     private String register;
-    private Set<Appointment> appointment = new HashSet<>();
-
 }
+
+
+

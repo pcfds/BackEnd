@@ -2,7 +2,6 @@ package ApiRestFinalProject.DentalClinic.Controller;
 
 import ApiRestFinalProject.DentalClinic.DTO.AppointmentDTO;
 import ApiRestFinalProject.DentalClinic.Service.impl.AppointmentService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,19 +9,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@AllArgsConstructor
+
+
 @RestController
-@RequestMapping("/api/appointment")
+@RequestMapping("/appointments")
 public class AppointmentController {
 
     @Autowired
     AppointmentService appointmentService;
 
-        @PostMapping("/register")
+    @PostMapping("/register")
     public ResponseEntity<?> create(@RequestBody AppointmentDTO appointmentDTO) {
-        appointmentService.create(appointmentDTO);
-        return ResponseEntity.ok(HttpStatus.OK);
-
+        AppointmentDTO appointment = appointmentService.create(appointmentDTO);
+        return new ResponseEntity<>(appointment, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
@@ -45,9 +44,8 @@ public class AppointmentController {
     }
 
     @GetMapping("/lists")
-         public ResponseEntity<Collection<AppointmentDTO>> findAll() {
-        Collection<AppointmentDTO> appointmentDTOS = appointmentService.findAll();
-        return new ResponseEntity<>(appointmentDTOS, HttpStatus.OK);
+    public ResponseEntity<Collection<AppointmentDTO>> findAll() {
+        return ResponseEntity.ok(appointmentService.findAll());
     }
 
 }
