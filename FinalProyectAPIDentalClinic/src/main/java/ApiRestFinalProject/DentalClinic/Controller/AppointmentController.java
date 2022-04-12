@@ -12,7 +12,7 @@ import java.util.Collection;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/appointments")
+@RequestMapping("/api/appointment")
 public class AppointmentController {
 
     @Autowired
@@ -45,9 +45,9 @@ public class AppointmentController {
     }
 
     @GetMapping("/lists")
-    public Collection<AppointmentDTO> findAll() {
-        return appointmentService.findAll();
-
+         public ResponseEntity<Collection<AppointmentDTO>> findAll() {
+        Collection<AppointmentDTO> appointmentDTOS = appointmentService.findAll();
+        return new ResponseEntity<>(appointmentDTOS, HttpStatus.OK);
     }
 
 }

@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Optional;
 
 
 @AllArgsConstructor
@@ -27,6 +28,8 @@ public class PatientController {
             return ResponseEntity.ok(HttpStatus.OK);
 
         }
+
+
 
         @GetMapping("/{id}")
         public ResponseEntity<PatientDTO> findPatientById(@PathVariable Integer id) {

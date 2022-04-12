@@ -12,7 +12,7 @@ public class AppointmentDTO {
     private Integer id;
     private Patient patient;
     private Dentist dentist;
-    private LocalDate Date;
+    private LocalDate date;
 
 
 

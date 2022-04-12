@@ -19,12 +19,19 @@ import java.util.Set;
 @Service
 public class PatientService implements IPatientService {
 
+
+
     @Autowired
     private IPatientRepository patientRepository;
 
     // vamos a mapear
     @Autowired
     ObjectMapper objectMapper;
+
+// buscar por email usando HQL
+//    public Optional<Patient> findByEmail (String email) {
+//        return patientRepository.findByEmail(email);
+//    }
 
 // encontrar un usuario por id
     @Override

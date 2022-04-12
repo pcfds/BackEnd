@@ -22,6 +22,7 @@ public class DentistService implements IDentistService {
     @Autowired
     ObjectMapper objectMapper;
 
+
     @Override
     public DentistDTO findById(Integer id) {
         Optional<Dentist> dentist = dentistRepository.findById(id);

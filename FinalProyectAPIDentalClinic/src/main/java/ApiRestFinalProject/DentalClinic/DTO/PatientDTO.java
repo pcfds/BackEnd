@@ -15,6 +15,7 @@ public class PatientDTO {
     private String name;
     private String surname;
     private String email;
+    private Integer dni;
     private LocalDate initDate;
     private AddressDTO address;
     private Set<Appointment> appointment = new HashSet<>();
