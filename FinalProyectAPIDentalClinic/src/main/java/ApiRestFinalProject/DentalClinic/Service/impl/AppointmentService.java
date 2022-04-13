@@ -6,6 +6,7 @@ import ApiRestFinalProject.DentalClinic.Repository.IAppointmentRespository;
 import ApiRestFinalProject.DentalClinic.Service.IAppointmentService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +22,14 @@ public class AppointmentService implements IAppointmentService {
 
     @Autowired
     private IAppointmentRespository appointmentRepository;
+
     @Autowired
     ObjectMapper objectMapper;
 
 
     @Override
     public AppointmentDTO findById(Integer id) {
+        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
         Optional<Appointment> appointment = appointmentRepository.findById(id);
         AppointmentDTO appointmentDTO = null;
@@ -37,6 +40,7 @@ public class AppointmentService implements IAppointmentService {
 
     @Override
     public AppointmentDTO create(AppointmentDTO appointmentDTO) {
+        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
         Appointment appointment = objectMapper.convertValue(appointmentDTO, Appointment.class);
         appointmentRepository.save(appointment);
@@ -51,6 +55,7 @@ public class AppointmentService implements IAppointmentService {
 
     @Override
     public AppointmentDTO update(AppointmentDTO appointmentDTO) {
+        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
         Appointment appointment = objectMapper.convertValue(appointmentDTO, Appointment.class);
         appointmentRepository.save(appointment);
@@ -59,6 +64,7 @@ public class AppointmentService implements IAppointmentService {
 
     @Override
     public Set<AppointmentDTO> findAll() {
+        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         List<Appointment> appointments = appointmentRepository.findAll();
         Set<AppointmentDTO> appointmentDTOS = new HashSet<>();
         for (Appointment appointment : appointments) {

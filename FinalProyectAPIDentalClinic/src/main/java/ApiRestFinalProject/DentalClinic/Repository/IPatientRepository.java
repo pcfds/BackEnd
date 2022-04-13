@@ -12,4 +12,5 @@ public interface IPatientRepository extends JpaRepository<Patient, Integer> {
 // Buscar  por email dentist
 //@Query("SELECT p FROM Patient WHERE p.email = ?1")
 //Optional<Patient> findByEmail(String email);
+
 }
