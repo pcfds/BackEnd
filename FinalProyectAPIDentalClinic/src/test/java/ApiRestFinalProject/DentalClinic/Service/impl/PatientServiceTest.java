@@ -20,6 +20,7 @@ class PatientServiceTest {
         PatientDTO patientDTO = new PatientDTO();
         patientDTO.setName("Pedro");
         patientDTO.setSurname("Castro");
+        patientDTO.setDni(1324);
         patientService.create(patientDTO);
 
         PatientDTO patientPedro = patientService.findById(1);
@@ -27,6 +28,41 @@ class PatientServiceTest {
 
         assertTrue(patientPedro != null);
 
+    }
+
+    @Test
+    public void testUpdatePatient() {
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setName("Pedro");
+        patientDTO.setSurname("Castro");
+        patientDTO.setDni(1324);
+
+        patientService.create(patientDTO);
+
+        PatientDTO patientPedro = patientService.findById(1);
+        patientPedro.setName("Pedro");
+        patientPedro.setSurname("Castro");
+        patientPedro.setDni(1324);
+
+        patientService.update(patientPedro);
+
+        PatientDTO patientPedro2 = patientService.findById(1);
+
+        assertTrue(patientPedro2.getName().equals("Pedro"));
+    }
+
+    @Test
+    public void testFindById() {
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setName("Pedro");
+        patientDTO.setSurname("Castro");
+        patientDTO.setDni(1324);
+
+        patientService.create(patientDTO);
+
+        PatientDTO patientPedro = patientService.findById(1);
+
+        assertTrue(patientPedro != null);
     }
 
     @Test

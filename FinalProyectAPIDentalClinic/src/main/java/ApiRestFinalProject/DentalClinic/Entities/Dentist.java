@@ -19,7 +19,7 @@ public class Dentist {
     private Integer id;
     private String name;
     private String surname;
-    private String register;
+    private Integer register;
     @OneToMany(mappedBy = "dentist", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Appointment> appointments;
