@@ -52,6 +52,19 @@ class PatientServiceTest {
     }
 
     @Test
+    public void testFindAll() {
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setName("Pedro");
+        patientDTO.setSurname("Castro");
+
+        patientService.create(patientDTO);
+
+        PatientDTO patientPedro = patientService.findById(1);
+
+        assertTrue(patientPedro != null);
+    }
+
+    @Test
     public void testFindById() {
         PatientDTO patientDTO = new PatientDTO();
         patientDTO.setName("Pedro");
@@ -68,13 +81,14 @@ class PatientServiceTest {
     @Test
     public void testDeletePatient() {
         PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setId(1);
         patientDTO.setName("Pedro");
         patientDTO.setSurname("Castro");
 
         patientService.create(patientDTO);
-        patientService.deleteById(4);
+        patientService.deleteById(1);
 
-        PatientDTO patientPedro = patientService.findById(4);
+        PatientDTO patientPedro = patientService.findById(1);
 
         assertTrue(patientPedro == null);
 

@@ -28,10 +28,6 @@ public class PatientService implements IPatientService {
     @Autowired
     ObjectMapper objectMapper;
 
-// buscar por email usando HQL
-//    public Optional<Patient> findByEmail (String email) {
-//        return patientRepository.findByEmail(email);
-//    }
 
 // encontrar un usuario por id
     @Override
@@ -77,4 +73,4 @@ public class PatientService implements IPatientService {
         return patientDTOS;
     }
 
-    }
+}
