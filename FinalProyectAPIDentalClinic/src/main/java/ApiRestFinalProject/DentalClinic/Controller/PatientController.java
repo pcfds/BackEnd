@@ -3,6 +3,7 @@ package ApiRestFinalProject.DentalClinic.Controller;
 
 import ApiRestFinalProject.DentalClinic.DTO.PatientDTO;
 import ApiRestFinalProject.DentalClinic.Entities.Patient;
+import ApiRestFinalProject.DentalClinic.GlobalExceptionHandler;
 import ApiRestFinalProject.DentalClinic.Service.impl.PatientService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

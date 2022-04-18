@@ -28,3 +28,17 @@
 2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
 2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
 2022-04-17 19:04:47 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-18 12:52:16 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}2"
+2022-04-18 12:52:40 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-18 14:52:23 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+2022-04-18 14:53:49 ERROR GlobalExceptionHandler:18 - Request method 'POST' not supported
+2022-04-18 14:55:19 ERROR GlobalExceptionHandler:18 - Request method 'POST' not supported
+2022-04-18 14:55:48 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+2022-04-18 15:02:52 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "32314124124124124"
+2022-04-18 15:03:33 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+2022-04-18 15:04:48 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "listsasdf"
+2022-04-18 15:04:58 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "12512512515112512515151"
+2022-04-18 15:08:28 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "p"
+2022-04-18 15:20:41 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "2ç"
+2022-04-18 15:30:08 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-18 15:30:13 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported

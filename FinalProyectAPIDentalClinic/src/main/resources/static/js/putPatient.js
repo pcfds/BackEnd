@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
     //los datos que el usuario pudo haber modificado del paciente
     const form = document.querySelector('#update_patient_form');
     form.addEventListener('submit', function (event) {
+        event.preventDefault();
         let patientId = document.querySelector('#patient_id').value;
 
         //creamos un JSON que tendrá los datos del paciente
@@ -13,6 +14,11 @@ window.addEventListener('load', function () {
             id: document.querySelector('#patient_id').value,
             name: document.querySelector('#name').value,
             surname: document.querySelector('#surname').value,
+            email: document.querySelector('#email').value,
+            dni: document.querySelector('#dni').value,
+            street: document.querySelector('#street').value,
+            number: document.querySelector('#number').value,
+            city:   document.querySelector('#city').value ,
 
         };
 
@@ -43,7 +49,7 @@ window.addEventListener('load', function () {
           fetch(url,settings)
           .then(response => response.json())
           .then(data => {
-              let student = data;
+              let patient = data;
               document.querySelector('#patient_id').value = patient.id;
               document.querySelector('#name').value = patient.name;
               document.querySelector('#surname').value = patient.surname;
@@ -54,8 +60,9 @@ window.addEventListener('load', function () {
              document.querySelector('#city').value = patient.address.city;
 
             //el form por default esta oculto y al editar se habilita
-              document.querySelector('#div_patient_updating').style.display = "block";
+              document.querySelector('#div_patient_updating').style.display = 'block';
           }).catch(error => {
-              alert("Error: " + error);
-          })
+              console.log(error);
+          });
+
       }

@@ -9,14 +9,16 @@ import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
 
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler extends Throwable {
 
     private static final Logger logger = Logger.getLogger(GlobalExceptionHandler.class);
 @ExceptionHandler(Exception.class)
-    public ResponseEntity<?> allErrors(Exception e, WebRequest req) {
+    public ResponseEntity<?> allErrors(Exception e) {
 
     logger.error(e.getMessage());
-    return new ResponseEntity("Error: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("Error: " + e.getCause(), HttpStatus.BAD_REQUEST);
 
     }
+
+
 }

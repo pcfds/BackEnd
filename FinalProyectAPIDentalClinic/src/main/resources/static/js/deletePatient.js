@@ -2,7 +2,7 @@ function deleteBy(id)
 {
            //con fetch invocamos a la API de pacientes  con el método DELETE
            //pasandole el id en la URL
-          const url = '/patientes/{id}'+ id;
+          const url = '/patients/'+ id;
           const settings = {
               method: 'DELETE'
           }
