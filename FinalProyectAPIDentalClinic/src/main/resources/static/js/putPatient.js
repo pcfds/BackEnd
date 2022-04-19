@@ -16,24 +16,34 @@ window.addEventListener('load', function () {
             surname: document.querySelector('#surname').value,
             email: document.querySelector('#email').value,
             dni: document.querySelector('#dni').value,
+            address: {
             street: document.querySelector('#street').value,
             number: document.querySelector('#number').value,
-            city:   document.querySelector('#city').value ,
+            city:   document.querySelector('#city').value
+            }
 
         };
 
         //invocamos utilizando la función fetch la API pacientes con el método PUT
         //que modificará al paciente que enviaremos en formato JSON
-        const url = '/patients/{id}';
-        const settings = {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        }
-          fetch(url,settings)
-          .then(response => response.json())
+
+       const settings = {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                };
+
+
+        fetch('/patients/update', settings)
+          .then((response) => response.json())
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((error) => {
+            console.error("error", error);
+          });
 
     })
  })

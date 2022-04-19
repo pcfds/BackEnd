@@ -2,10 +2,11 @@ window.addEventListener('load', function () {
 
      //Al cargar la pagina buscamos y obtenemos el formulario donde estarán
      //los datos que el usuario cargará del nuevo estudiante
-    const formulario = document.querySelector('#add_new_patient');
+    const form = document.querySelector('#add_new_patient');
 
     //Ante un submit del formulario se ejecutará la siguiente funcion
-    formulario.addEventListener('submit', function (event) {
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
         //creamos un JSON que tendrá los datos del nuevo estudiante
         const formData = {
@@ -13,6 +14,10 @@ window.addEventListener('load', function () {
             surname: document.querySelector('#surname').value,
             email: document.querySelector('#email').value,
             dni: document.querySelector('#dni').value,
+            address: { street: document.querySelector('#street').value,
+                                 number: document.querySelector('#number').value,
+                                  city:  document.querySelector('#city').value,}
+
 
 
         };
@@ -42,6 +47,7 @@ window.addEventListener('load', function () {
                  //se dejan todos los campos vacíos por si se quiere ingresar otro estudiante
                  resetUploadForm();
 
+
             })
             .catch(error => {
                  //Si hay algun error se muestra un mensaje diciendo que el estudiante
@@ -61,6 +67,9 @@ window.addEventListener('load', function () {
         document.querySelector('#surname').value = "";
         document.querySelector('#dni').value = "";
         document.querySelector('#email').value = "";
+         document.querySelector('#street').value = "";
+          document.querySelector('#number').value = "";
+           document.querySelector('#city').value = "";
 
     }
 

@@ -8,49 +8,64 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/postPatient.js"></script>
 </head>
 <body>
 <div class="container">
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="/index.html">Admin Patients</a>
+            <a class="nav-link" href="/index.html">Go Back Home</a>
+            <a class="nav-link" href="/listPatient.html">Patients</a>
         </li>
     </ul>
     <div class="row">
         <div class="col-sm-7" style="background-color:#e6fffa; padding:10px; border-radius:3px">
             <h3>Register Patient</h3>
-            <form id="add_new_student">
+            <form id="add_new_patient">
                 <div class="form-group">
                     <label class="control-label" for="name">Name:</label>
                     <input type="text" class="form-control" id="name"
-                           placeholder="Register your name" name="name" required></input>
+                           placeholder="Register your name" name="name" required/>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="surname">Surname:</label>
                     <input type="text" class="form-control" id="surname"
-                           placeholder="Register your name" name="surname" required></input>
+                           placeholder="Register your name" name="surname" required/>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label" for="email">Email:</label>
                     <input type="text" class="form-control" id="email"
-                           placeholder="Register your email" name="email" required></input>
+                           placeholder="Register your email" name="email" required/>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="dni">Identification:</label>
                     <input type="text" class="form-control" id="dni"
-                           placeholder="Register your surname" name="dni" required></input>
+                           placeholder="Register your surname" name="dni" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="street">Street:</label>
+                    <input type="text" class="form-control" id="street"
+                           placeholder="Register your street" name="street" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="number">Number:</label>
+                    <input type="text" class="form-control" id="number"
+                           placeholder="Register your number" name="number" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="city">City:</label>
+                    <input type="text" class="form-control" id="city"
+                           placeholder="Register your city" name="city" required/>
                 </div>
 
 
 
-                <button type="submit" class="btn btn-danger" id="btn-add-new-student">Save</button>
+                <button type="submit" class="btn btn-danger" id="btn-add-new-patient">Save</button>
             </form>
-            <div id="response" style="display:none; margin-top:10px">
+            <div id="response" style="display:none;">
             </div>
         </div>
     </div>
 </div>
-
+<script type="text/javascript" src="/js/postPatient.js"></script>
 </body>

@@ -42,3 +42,7 @@
 2022-04-18 15:20:41 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "2ç"
 2022-04-18 15:30:08 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
 2022-04-18 15:30:13 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-19 11:47:59 ERROR GlobalExceptionHandler:18 - Content type 'multipart/form-data;boundary=----WebKitFormBoundaryILcxSKk4VLN6ICUp;charset=UTF-8' not supported
+2022-04-19 11:48:03 ERROR GlobalExceptionHandler:18 - Content type 'multipart/form-data;boundary=----WebKitFormBoundarymRigjAvI9w18tRMI;charset=UTF-8' not supported
+2022-04-19 12:23:20 ERROR GlobalExceptionHandler:18 - Content type 'multipart/form-data;boundary=----WebKitFormBoundaryHcF3AgWUhk4YEZ0r;charset=UTF-8' not supported
+2022-04-19 12:23:27 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "update"
