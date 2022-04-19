@@ -2,25 +2,19 @@ window.addEventListener('load', function () {
 
     //Buscamos y obtenemos el form donde estan
     //los datos que el usuario pudo haber modificado del paciente
-    const form = document.querySelector('#update_patient_form');
+    const form = document.querySelector('#update_dentist_form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        let patientId = document.querySelector('#patient_id').value;
+        let patientId = document.querySelector('#dentist_id').value;
 
         //creamos un JSON que tendrá los datos del paciente
         //a diferencia de un paciente nuevo en este caso enviamos el id
         //para poder identificarlo y modificarlo para no cargarlo como nuevo
         const formData = {
-            id: document.querySelector('#patient_id').value,
+            id: document.querySelector('#dentist_id').value,
             name: document.querySelector('#name').value,
             surname: document.querySelector('#surname').value,
-            email: document.querySelector('#email').value,
-            dni: document.querySelector('#dni').value,
-            address: {
-            street: document.querySelector('#street').value,
-            number: document.querySelector('#number').value,
-            city:   document.querySelector('#city').value
-            }
+            register: document.querySelector('#register').value,
 
         };
 
@@ -36,7 +30,7 @@ window.addEventListener('load', function () {
                 };
 
 
-        fetch('/patients/update', settings)
+        fetch('/dentists/update', settings)
           .then((response) => response.json())
           .then((result) => {
             console.log(result);
@@ -54,7 +48,7 @@ window.addEventListener('load', function () {
     //se encarga de llenar el form con los datos del paciente
     //que se desea modificar
     function findBy(id) {
-          const url = '/patients/' +id;
+          const url = '/dentists/' +id;
           const settings = {
               method: 'GET'
           }
@@ -62,20 +56,17 @@ window.addEventListener('load', function () {
           .then(response => response.json())
           .then(data => {
               let patient = data;
-              document.querySelector('#patient_id').value = patient.id;
-              document.querySelector('#name').value = patient.name;
-              document.querySelector('#surname').value = patient.surname;
-             document.querySelector('#email').value = patient.email;
-             document.querySelector('#dni').value = patient.dni;
-             document.querySelector('#street').value = patient.address.street;
-             document.querySelector('#number').value = patient.address.number;
-             document.querySelector('#city').value = patient.address.city;
+              document.querySelector('#patient_id').value = dentist.id;
+              document.querySelector('#name').value = dentist.name;
+              document.querySelector('#surname').value = dentist.surname;
+             document.querySelector('#register').value = dentist.register;
+
 
 
 
             //el form por default esta oculto y al editar se habilita
           }).catch(error => {
-          document.querySelector('#div_patient_updating');
+          document.querySelector('#div_dentist_updating').style.display = 'block';
 
               console.log(error);
           });

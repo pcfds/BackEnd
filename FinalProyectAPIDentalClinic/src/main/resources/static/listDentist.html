@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Dentists</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/getDentist.js"></script>
+    <script type="text/javascript" src="/js/putDentist.js"></script>
+    <script type="text/javascript" src="/js/deleteDentist.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+    </ul>
+
+    <div>
+        <h1>Dentists</h1>
+        <div class="row col-md-12 table-responsive">
+            <table id="dentists" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>name</th>
+                    <th>surname</th>
+                    <th>Register</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" style="display: inline-block background-color:#e6fffa; padding:10px; border-radius:3px">
+            <form id="update_dentist_form">
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" id="dentist_id" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" placeholder="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label>Surname:</label>
+                    <input type="text" class="form-control" placeholder="surname" id="surname">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" class="form-control" placeholder="register" id="email">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+            <div id="response" style="display:none; margin:10px">
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+</body>
+</html>

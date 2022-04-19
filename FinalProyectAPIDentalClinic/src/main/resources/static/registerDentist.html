@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Dentists</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <Nav class="nav nav-pills">
+            <a class="nav-link" href="/index.html">Go Back Home</a>
+            <a class="nav-link" href="/listDentist.html">Dentists</a>
+
+    </Nav>
+    <div class="row">
+        <div class="col-sm-7" style="background-color:#ADD8E6; padding:10px; border-radius:3px">
+            <h3>Register Dentists</h3>
+            <form id="add_new_dentist">
+                <div class="form-group">
+                    <label class="control-label" for="name">Name:</label>
+                    <input type="text" class="form-control" id="name"
+                           placeholder="Register your name" name="name" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="surname">Surname:</label>
+                    <input type="text" class="form-control" id="surname"
+                           placeholder="Register your name" name="surname" required/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="register">Register:</label>
+                    <input type="text" class="form-control" id="register"
+                           placeholder="Register your email" name="register" required/>
+                </div>
+
+
+                <button type="submit" class="btn btn-danger" id="btn-add-new-patient">Save</button>
+            </form>
+            <div id="response" style="display:none;">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/postDentist.js"></script>
+</body>
