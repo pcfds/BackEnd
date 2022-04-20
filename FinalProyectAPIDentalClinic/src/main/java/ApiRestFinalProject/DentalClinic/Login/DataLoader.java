@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements ApplicationRunner {
 
-    private UserRepository userRepo;
+    private final UserRepository userRepo;
 
     public DataLoader(UserRepository userRepo) {
         this.userRepo = userRepo;
@@ -20,7 +20,18 @@ public class DataLoader implements ApplicationRunner {
         String password = encoder.encode("password");
         String password2 = encoder.encode("password2");
 
-        userRepo.save(new AppUser("Pedro", "pepicf", "pedro@gmail.com", password, AppUserRoles.ADMIN));
-        userRepo.save(new AppUser("Pedro2", "pepicf2", "pepi@gmail.com", password2, AppUserRoles.USER));
+
+//        userRepo.save(new AppUser("Pedro", "pepicf", "pedro@gmail.com", password, AppUserRoles.ADMIN));
+//        userRepo.save(new AppUser("Pedro2", "pepicf2", "pepi@gmail.com", password2, AppUserRoles.USER));
+    }
+
+    public void run2(AppUser user) throws Exception {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String password = encoder.encode(user.getPassword());
+        user.setPassword(password);
+        user.setRoles(AppUserRoles.USER);
+
+
+        userRepo.save(user);
     }
 }

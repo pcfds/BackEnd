@@ -18,14 +18,15 @@ class DentistServiceTest {
 
     public void testCreateDentist(){
         DentistDTO dentistDTO = new DentistDTO();
+        dentistDTO.setId(1);
         dentistDTO.setName("Pedro");
         dentistDTO.setSurname("Perez");
         dentistDTO.setRegister(456);
         dentistService.create(dentistDTO);
 
-        dentistService.findById(1);
+        dentistService.findById(dentistDTO.getId());
 
-        assertTrue(dentistService.findById(1).getName().equals("Pedro"));
+        assertEquals(dentistService.findById(dentistDTO.getId()).getName(),"Pedro");
 
     }
 
@@ -37,11 +38,11 @@ class DentistServiceTest {
         dentistDTO.setRegister(456);
 
         dentistService.create(dentistDTO);
-        dentistService.deleteById(2);
+        dentistService.deleteById(1);
 
-        DentistDTO dentistTest = dentistService.findById(2);
+        DentistDTO dentistTest = dentistService.findById(1);
 
-        assertTrue(dentistTest == null);
+        assertNull(dentistTest);
     }
 
     @Test
@@ -67,7 +68,7 @@ class DentistServiceTest {
 
         dentistService.update(dentistDTO);
 
-        assertTrue(dentistService.findById(1).getName().equals("Pedro"));
+        assertEquals("Pedro", dentistService.findById(1).getName());
     }
 
     @Test

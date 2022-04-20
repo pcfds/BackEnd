@@ -1,14 +1,18 @@
 package ApiRestFinalProject.DentalClinic.Login;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+
 @Data
 @Entity
+
+@NoArgsConstructor
 public class AppUser implements UserDetails {
     @Id
   @SequenceGenerator(name="user_seq",sequenceName="user_seq")
