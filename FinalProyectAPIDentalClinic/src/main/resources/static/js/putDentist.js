@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
           .then(response => response.json())
           .then(data => {
               let patient = data;
-              document.querySelector('#patient_id').value = dentist.id;
+              document.querySelector('#dentist_id').value = dentist.id;
               document.querySelector('#name').value = dentist.name;
               document.querySelector('#surname').value = dentist.surname;
              document.querySelector('#register').value = dentist.register;
@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
 
             //el form por default esta oculto y al editar se habilita
           }).catch(error => {
-          document.querySelector('#div_dentist_updating').style.display = 'block';
+          document.querySelector('#div_dentist_updating');
 
               console.log(error);
           });
