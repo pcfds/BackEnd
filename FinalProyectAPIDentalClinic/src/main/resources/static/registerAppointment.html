@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Patients</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <Nav class="nav nav-pills">
+
+            <a class="nav-link" href="/index.html">Go Back Home</a>
+            <a class="nav-link" href="/listAppointment.html"> Lists Appointment</a>
+
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-7" style="background-color:#ADD8E6; padding:10px; border-radius:3px">
+            <h3>Register Appointment</h3>
+            <form id="add_new_appointment">
+                <div class="form-group">
+                    <label class="control-label" for="patient">Patient:</label>
+                    <input type="text" class="form-control" id="patient"
+                           placeholder="Register the PatientDI " name="patient" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="dentist">Dentist:</label>
+                    <input type="text" class="form-control" id="dentist"
+                           placeholder="Register The Dentist ID" name="dentist" required/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="date">Date:</label>
+                    <input type="text" class="form-control" id="date"
+                           placeholder="Register your date" name="date" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="dni">Time:</label>
+                    <input type="text" class="form-control" id="time"
+                           placeholder="Register the hour" name="time" required/>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-danger" id="btn-add-new-appointment">Save</button>
+            </form>
+            <div id="response" style="display:none;">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/postAppointment.js"></script>
+</body>

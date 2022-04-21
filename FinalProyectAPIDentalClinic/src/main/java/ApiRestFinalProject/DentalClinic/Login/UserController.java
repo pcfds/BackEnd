@@ -27,6 +27,7 @@ public class UserController {
     public String user() {
         return "<h1> Welcome User to your Dental Service </h1>";
     }
+
     @GetMapping("/admin")
     public String admin() {
         return "<h1> Welcome Admin to your Dental Service </h1>";
