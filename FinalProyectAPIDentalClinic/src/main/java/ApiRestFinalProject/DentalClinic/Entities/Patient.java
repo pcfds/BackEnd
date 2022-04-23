@@ -23,7 +23,7 @@ public class Patient {
     private String surname;
     private String email;
     private int dni;
-    private LocalDate initDate;
+    private LocalDate initDate = LocalDate.now();
 
 // relation with Address
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

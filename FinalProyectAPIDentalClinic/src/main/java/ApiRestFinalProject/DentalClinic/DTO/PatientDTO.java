@@ -16,7 +16,7 @@ public class PatientDTO {
     private String surname;
     private String email;
     private Integer dni;
-    private LocalDate initDate;
+    private LocalDate initDate = LocalDate.now();
     private AddressDTO address;
 
 
